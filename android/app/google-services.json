@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "67705502662",
+    "project_id": "fishgram-47c10",
+    "storage_bucket": "fishgram-47c10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67705502662:android:5a3223d23a4e9adab910c7",
+        "android_client_info": {
+          "package_name": "com.HYcompany.fishgram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67705502662-82ep2n8721697q34r98vhju5g1uqd01u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYj5rI6w-_c7L7ousmiUCPSbVphCRKhR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67705502662-82ep2n8721697q34r98vhju5g1uqd01u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "67705502662-tncfpsj54tm84v58i2dtl072ad8i30mr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HYcompany.fishgram"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

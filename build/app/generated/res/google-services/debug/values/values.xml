@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">67705502662-82ep2n8721697q34r98vhju5g1uqd01u.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">67705502662</string>
+    <string name="google_api_key" translatable="false">AIzaSyCYj5rI6w-_c7L7ousmiUCPSbVphCRKhR8</string>
+    <string name="google_app_id" translatable="false">1:67705502662:android:5a3223d23a4e9adab910c7</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCYj5rI6w-_c7L7ousmiUCPSbVphCRKhR8</string>
+    <string name="google_storage_bucket" translatable="false">fishgram-47c10.appspot.com</string>
+    <string name="project_id" translatable="false">fishgram-47c10</string>
+</resources>
