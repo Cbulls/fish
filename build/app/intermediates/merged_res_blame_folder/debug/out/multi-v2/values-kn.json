@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/heeyun/StudioProjects/Instagram/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
+            "outputFile": "/Users/heeyun/StudioProjects/ Instagram 220610/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
             "map": [
                 {
-                    "source": "/Users/heeyun/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/res/values-kn/values.xml",
+                    "source": "/Users/heeyun/.gradle/caches/transforms-3/514efd3852815937d54ccd14911748a2/transformed/jetified-play-services-basement-18.0.0/res/values-kn/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "141",
+                        "endOffsets": "336"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1063",
+                        "endColumns": "145",
+                        "endOffsets": "1204"
+                    }
+                },
+                {
+                    "source": "/Users/heeyun/.gradle/caches/transforms-3/de037800295f039b33eec1c58cd9f22f/transformed/jetified-play-services-base-18.0.1/res/values-kn/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/heeyun/.gradle/caches/transforms-3/b11c0e2c212c747cb4bcf29314469768/transformed/core-1.6.0/res/values-kn/values-kn.xml",
+                    "source": "/Users/heeyun/.gradle/caches/transforms-3/a89848aeccacf75f77c7c2662b163b2e/transformed/core-1.6.0/res/values-kn/values-kn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -35,23 +52,6 @@
                         "startOffsets": "2291",
                         "endColumns": "100",
                         "endOffsets": "2387"
-                    }
-                },
-                {
-                    "source": "/Users/heeyun/.gradle/caches/transforms-3/f0589360d9c02b2f33aa86e62a9e0782/transformed/jetified-play-services-basement-18.0.0/res/values-kn/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "141",
-                        "endOffsets": "336"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1063",
-                        "endColumns": "145",
-                        "endOffsets": "1204"
                     }
                 }
             ]

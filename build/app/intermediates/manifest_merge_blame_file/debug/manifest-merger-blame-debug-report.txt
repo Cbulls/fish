@@ -13,28 +13,28 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/Users/heeyun/StudioProjects/Instagram/android/app/src/main/AndroidManifest.xml:3:5-66
-15-->/Users/heeyun/StudioProjects/Instagram/android/app/src/main/AndroidManifest.xml:3:22-64
+15-->/Users/heeyun/StudioProjects/ Instagram 220610/android/app/src/main/AndroidManifest.xml:3:5-66
+15-->/Users/heeyun/StudioProjects/ Instagram 220610/android/app/src/main/AndroidManifest.xml:3:22-64
 16    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-16-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
-16-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
+16-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+16-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
 17    <uses-permission android:name="android.permission.VIBRATE" />
-17-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-66
-17-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-63
+17-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-66
+17-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-63
 18    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
-18-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
-18-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
+18-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
+18-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
 19    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-19-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-79
-19-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-76
+19-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-79
+19-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-76
 20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-20-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:24:5-79
-20-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:24:22-76
+20-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:24:5-79
+20-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:24:22-76
 21
 22    <application
 23        android:name="android.app.Application"
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.6.0] /Users/heeyun/.gradle/caches/transforms-3/b11c0e2c212c747cb4bcf29314469768/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+24-->[androidx.core:core:1.6.0] /Users/heeyun/.gradle/caches/transforms-3/a89848aeccacf75f77c7c2662b163b2e/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 25        android:debuggable="true"
 26        android:icon="@mipmap/ic_launcher"
 27        android:label="instagram" >
@@ -72,204 +72,204 @@
 59            android:value="2" />
 60
 61        <service
-61-->[:firebase_auth] /Users/heeyun/StudioProjects/Instagram/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+61-->[:firebase_auth] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 62            android:name="com.google.firebase.components.ComponentDiscoveryService"
-62-->[:firebase_auth] /Users/heeyun/StudioProjects/Instagram/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+62-->[:firebase_auth] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
 63            android:directBootAware="true"
-63-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/60cb43b41827ac5833e6ffb9297cb895/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
+63-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/04b7acc8de0f520e3af6f4f973f3c7ee/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
 64            android:exported="false" >
-64-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:66:13-37
+64-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:66:13-37
 65            <meta-data
-65-->[:firebase_auth] /Users/heeyun/StudioProjects/Instagram/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+65-->[:firebase_auth] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 66                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-66-->[:firebase_auth] /Users/heeyun/StudioProjects/Instagram/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+66-->[:firebase_auth] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 67                android:value="com.google.firebase.components.ComponentRegistrar" />
-67-->[:firebase_auth] /Users/heeyun/StudioProjects/Instagram/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+67-->[:firebase_auth] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 68            <meta-data
-68-->[:cloud_firestore] /Users/heeyun/StudioProjects/Instagram/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+68-->[:cloud_firestore] /Users/heeyun/StudioProjects/ Instagram 220610/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 69                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-69-->[:cloud_firestore] /Users/heeyun/StudioProjects/Instagram/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
+69-->[:cloud_firestore] /Users/heeyun/StudioProjects/ Instagram 220610/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
 70                android:value="com.google.firebase.components.ComponentRegistrar" />
-70-->[:cloud_firestore] /Users/heeyun/StudioProjects/Instagram/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+70-->[:cloud_firestore] /Users/heeyun/StudioProjects/ Instagram 220610/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 71            <meta-data
-71-->[:firebase_core] /Users/heeyun/StudioProjects/Instagram/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+71-->[:firebase_core] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 72                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-72-->[:firebase_core] /Users/heeyun/StudioProjects/Instagram/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+72-->[:firebase_core] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 73                android:value="com.google.firebase.components.ComponentRegistrar" />
-73-->[:firebase_core] /Users/heeyun/StudioProjects/Instagram/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+73-->[:firebase_core] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 74            <meta-data
-74-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:67:13-69:85
+74-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:67:13-69:85
 75                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-75-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:68:17-109
+75-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:68:17-109
 76                android:value="com.google.firebase.components.ComponentRegistrar" />
-76-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:69:17-82
+76-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:69:17-82
 77            <meta-data
-77-->[com.google.firebase:firebase-firestore:24.1.2] /Users/heeyun/.gradle/caches/transforms-3/2e9869935de96f599ae1194969da5d44/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:20:13-22:85
+77-->[com.google.firebase:firebase-firestore:24.1.2] /Users/heeyun/.gradle/caches/transforms-3/e7c839b71b6b99c232b4779b3c9b9957/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:20:13-22:85
 78                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-78-->[com.google.firebase:firebase-firestore:24.1.2] /Users/heeyun/.gradle/caches/transforms-3/2e9869935de96f599ae1194969da5d44/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:21:17-111
+78-->[com.google.firebase:firebase-firestore:24.1.2] /Users/heeyun/.gradle/caches/transforms-3/e7c839b71b6b99c232b4779b3c9b9957/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:21:17-111
 79                android:value="com.google.firebase.components.ComponentRegistrar" />
-79-->[com.google.firebase:firebase-firestore:24.1.2] /Users/heeyun/.gradle/caches/transforms-3/2e9869935de96f599ae1194969da5d44/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:22:17-82
+79-->[com.google.firebase:firebase-firestore:24.1.2] /Users/heeyun/.gradle/caches/transforms-3/e7c839b71b6b99c232b4779b3c9b9957/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:22:17-82
 80        </service>
 81
 82        <provider
-82-->[:image_picker_android] /Users/heeyun/StudioProjects/Instagram/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+82-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 83            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-83-->[:image_picker_android] /Users/heeyun/StudioProjects/Instagram/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+83-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
 84            android:authorities="com.HYcompany.fishgram.flutter.image_provider"
-84-->[:image_picker_android] /Users/heeyun/StudioProjects/Instagram/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+84-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
 85            android:exported="false"
-85-->[:image_picker_android] /Users/heeyun/StudioProjects/Instagram/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+85-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 86            android:grantUriPermissions="true" >
-86-->[:image_picker_android] /Users/heeyun/StudioProjects/Instagram/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+86-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
 87            <meta-data
-87-->[:image_picker_android] /Users/heeyun/StudioProjects/Instagram/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
+87-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
 88                android:name="android.support.FILE_PROVIDER_PATHS"
-88-->[:image_picker_android] /Users/heeyun/StudioProjects/Instagram/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+88-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 89                android:resource="@xml/flutter_image_picker_file_paths" />
-89-->[:image_picker_android] /Users/heeyun/StudioProjects/Instagram/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
+89-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
 90        </provider>
 91
 92        <receiver
-92-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-17:40
+92-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-17:40
 93            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
-93-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-97
+93-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-97
 94            android:exported="false" />
-94-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
+94-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
 95        <receiver
-95-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-27:20
+95-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-27:20
 96            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
-96-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-101
+96-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-101
 97            android:exported="false" >
-97-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-37
+97-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-37
 98            <intent-filter>
-98-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-26:29
+98-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-26:29
 99                <action android:name="android.intent.action.BOOT_COMPLETED" />
-99-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-79
-99-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-76
+99-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-79
+99-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-76
 100                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-100-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:17-84
-100-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:25-81
+100-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:17-84
+100-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:25-81
 101                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-101-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-82
-101-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-79
+101-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-82
+101-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-79
 102                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-102-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-82
-102-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/Instagram/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:25-79
+102-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-82
+102-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:25-79
 103            </intent-filter>
 104        </receiver>
 105
 106        <uses-library
-106-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+106-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/9db46b6482f60d893430cc11c422b091/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 107            android:name="androidx.window.extensions"
-107-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+107-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/9db46b6482f60d893430cc11c422b091/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
 108            android:required="false" />
-108-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+108-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/9db46b6482f60d893430cc11c422b091/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
 109        <uses-library
-109-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+109-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/9db46b6482f60d893430cc11c422b091/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
 110            android:name="androidx.window.sidecar"
-110-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+110-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/9db46b6482f60d893430cc11c422b091/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
 111            android:required="false" />
-111-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+111-->[androidx.window:window:1.0.0-beta04] /Users/heeyun/.gradle/caches/transforms-3/9db46b6482f60d893430cc11c422b091/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
 112
 113        <activity
-113-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:27:9-44:20
+113-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:27:9-44:20
 114            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-114-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:28:13-80
+114-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:28:13-80
 115            android:excludeFromRecents="true"
-115-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:29:13-46
+115-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:29:13-46
 116            android:exported="true"
-116-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:30:13-36
+116-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:30:13-36
 117            android:launchMode="singleTask"
-117-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:31:13-44
+117-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:31:13-44
 118            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-118-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:32:13-72
+118-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:32:13-72
 119            <intent-filter>
-119-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:33:13-43:29
+119-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:33:13-43:29
 120                <action android:name="android.intent.action.VIEW" />
-120-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:17-69
-120-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:25-66
+120-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:17-69
+120-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:25-66
 121
 122                <category android:name="android.intent.category.DEFAULT" />
-122-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
-122-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
+122-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
+122-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
 123                <category android:name="android.intent.category.BROWSABLE" />
-123-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:17-78
-123-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:27-75
+123-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:17-78
+123-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:27-75
 124
 125                <data
-125-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:39:17-42:51
+125-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:39:17-42:51
 126                    android:host="firebase.auth"
-126-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:40:21-49
+126-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:40:21-49
 127                    android:path="/"
-127-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:41:21-37
+127-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:41:21-37
 128                    android:scheme="genericidp" />
-128-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:42:21-48
+128-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:42:21-48
 129            </intent-filter>
 130        </activity>
 131        <activity
-131-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:45:9-62:20
+131-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:45:9-62:20
 132            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-132-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:46:13-79
+132-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:46:13-79
 133            android:excludeFromRecents="true"
-133-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:47:13-46
+133-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:47:13-46
 134            android:exported="true"
-134-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:48:13-36
+134-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:48:13-36
 135            android:launchMode="singleTask"
-135-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:49:13-44
+135-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:49:13-44
 136            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-136-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:50:13-72
+136-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:50:13-72
 137            <intent-filter>
-137-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:51:13-61:29
+137-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:51:13-61:29
 138                <action android:name="android.intent.action.VIEW" />
-138-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:17-69
-138-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:25-66
+138-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:17-69
+138-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:25-66
 139
 140                <category android:name="android.intent.category.DEFAULT" />
-140-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
-140-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
+140-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
+140-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
 141                <category android:name="android.intent.category.BROWSABLE" />
-141-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:17-78
-141-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:27-75
+141-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:17-78
+141-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:27-75
 142
 143                <data
-143-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:39:17-42:51
+143-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:39:17-42:51
 144                    android:host="firebase.auth"
-144-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:40:21-49
+144-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:40:21-49
 145                    android:path="/"
-145-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:41:21-37
+145-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:41:21-37
 146                    android:scheme="recaptcha" />
-146-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/52d3b932588a4fef128998c797d2d1d9/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:42:21-48
+146-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:42:21-48
 147            </intent-filter>
 148        </activity>
 149
 150        <provider
-150-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/60cb43b41827ac5833e6ffb9297cb895/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
+150-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/04b7acc8de0f520e3af6f4f973f3c7ee/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
 151            android:name="com.google.firebase.provider.FirebaseInitProvider"
-151-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/60cb43b41827ac5833e6ffb9297cb895/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
+151-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/04b7acc8de0f520e3af6f4f973f3c7ee/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
 152            android:authorities="com.HYcompany.fishgram.firebaseinitprovider"
-152-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/60cb43b41827ac5833e6ffb9297cb895/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
+152-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/04b7acc8de0f520e3af6f4f973f3c7ee/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
 153            android:directBootAware="true"
-153-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/60cb43b41827ac5833e6ffb9297cb895/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
+153-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/04b7acc8de0f520e3af6f4f973f3c7ee/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
 154            android:exported="false"
-154-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/60cb43b41827ac5833e6ffb9297cb895/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
+154-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/04b7acc8de0f520e3af6f4f973f3c7ee/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
 155            android:initOrder="100" />
-155-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/60cb43b41827ac5833e6ffb9297cb895/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
+155-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/04b7acc8de0f520e3af6f4f973f3c7ee/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
 156
 157        <activity
-157-->[com.google.android.gms:play-services-base:18.0.1] /Users/heeyun/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+157-->[com.google.android.gms:play-services-base:18.0.1] /Users/heeyun/.gradle/caches/transforms-3/de037800295f039b33eec1c58cd9f22f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
 158            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-158-->[com.google.android.gms:play-services-base:18.0.1] /Users/heeyun/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+158-->[com.google.android.gms:play-services-base:18.0.1] /Users/heeyun/.gradle/caches/transforms-3/de037800295f039b33eec1c58cd9f22f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
 159            android:exported="false"
-159-->[com.google.android.gms:play-services-base:18.0.1] /Users/heeyun/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+159-->[com.google.android.gms:play-services-base:18.0.1] /Users/heeyun/.gradle/caches/transforms-3/de037800295f039b33eec1c58cd9f22f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
 160            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-160-->[com.google.android.gms:play-services-base:18.0.1] /Users/heeyun/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+160-->[com.google.android.gms:play-services-base:18.0.1] /Users/heeyun/.gradle/caches/transforms-3/de037800295f039b33eec1c58cd9f22f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
 161
 162        <meta-data
-162-->[com.google.android.gms:play-services-basement:18.0.0] /Users/heeyun/.gradle/caches/transforms-3/f0589360d9c02b2f33aa86e62a9e0782/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+162-->[com.google.android.gms:play-services-basement:18.0.0] /Users/heeyun/.gradle/caches/transforms-3/514efd3852815937d54ccd14911748a2/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
 163            android:name="com.google.android.gms.version"
-163-->[com.google.android.gms:play-services-basement:18.0.0] /Users/heeyun/.gradle/caches/transforms-3/f0589360d9c02b2f33aa86e62a9e0782/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+163-->[com.google.android.gms:play-services-basement:18.0.0] /Users/heeyun/.gradle/caches/transforms-3/514efd3852815937d54ccd14911748a2/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
 164            android:value="@integer/google_play_services_version" />
-164-->[com.google.android.gms:play-services-basement:18.0.0] /Users/heeyun/.gradle/caches/transforms-3/f0589360d9c02b2f33aa86e62a9e0782/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+164-->[com.google.android.gms:play-services-basement:18.0.0] /Users/heeyun/.gradle/caches/transforms-3/514efd3852815937d54ccd14911748a2/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
 165    </application>
 166
 167</manifest>

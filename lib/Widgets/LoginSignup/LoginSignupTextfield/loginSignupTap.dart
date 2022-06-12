@@ -5,6 +5,24 @@ import '../../../Store/loginSignupData.dart';
 class LoginSignupTap extends StatelessWidget {
   const LoginSignupTap({Key? key, required this.text}) : super(key: key);
   final String text;
+
+  changeTapColor(text, bool value){
+    if(text == 'LOG IN'){
+      if(!value){
+        return Colors.amber;
+      } else{
+        return Colors.grey;
+      }
+    }
+    if(text == 'SIGN UP'){
+      if(value){
+        return Colors.amber;
+      } else{
+        return Colors.grey;
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -18,7 +36,7 @@ class LoginSignupTap extends StatelessWidget {
             style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: text=='LOG IN' ? Colors.brown : Colors.purple
+                color: changeTapColor(text, context.watch<LoginSignupData>().isSignup)
             ),
           ),
           if (text=='LOG IN'? !context.watch<LoginSignupData>().isSignup : context.watch<LoginSignupData>().isSignup)

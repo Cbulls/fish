@@ -1,27 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/heeyun/StudioProjects/Instagram/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml",
+            "outputFile": "/Users/heeyun/StudioProjects/ Instagram 220610/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml",
             "map": [
                 {
-                    "source": "/Users/heeyun/.gradle/caches/transforms-3/f0589360d9c02b2f33aa86e62a9e0782/transformed/jetified-play-services-basement-18.0.0/res/values-es/values.xml",
+                    "source": "/Users/heeyun/.gradle/caches/transforms-3/a89848aeccacf75f77c7c2662b163b2e/transformed/core-1.6.0/res/values-es/values-es.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "155",
-                        "endOffsets": "350"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "10",
+                        "startLines": "20",
                         "startColumns": "4",
-                        "startOffsets": "1091",
-                        "endColumns": "159",
-                        "endOffsets": "1246"
+                        "startOffsets": "2392",
+                        "endColumns": "100",
+                        "endOffsets": "2488"
                     }
                 },
                 {
-                    "source": "/Users/heeyun/.gradle/caches/transforms-3/1a2cb69c9228e95e429c828957f3a3b6/transformed/jetified-play-services-base-18.0.1/res/values-es/values.xml",
+                    "source": "/Users/heeyun/.gradle/caches/transforms-3/de037800295f039b33eec1c58cd9f22f/transformed/jetified-play-services-base-18.0.1/res/values-es/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,20 +38,20 @@
                     }
                 },
                 {
-                    "source": "/Users/heeyun/.gradle/caches/transforms-3/b11c0e2c212c747cb4bcf29314469768/transformed/core-1.6.0/res/values-es/values-es.xml",
+                    "source": "/Users/heeyun/.gradle/caches/transforms-3/514efd3852815937d54ccd14911748a2/transformed/jetified-play-services-basement-18.0.0/res/values-es/values.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "155",
+                        "endOffsets": "350"
                     },
                     "to": {
-                        "startLines": "20",
+                        "startLines": "10",
                         "startColumns": "4",
-                        "startOffsets": "2392",
-                        "endColumns": "100",
-                        "endOffsets": "2488"
+                        "startOffsets": "1091",
+                        "endColumns": "159",
+                        "endOffsets": "1246"
                     }
                 }
             ]

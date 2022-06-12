@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/Pages/login.dart';
 import 'package:instagram/Widgets/notification.dart';
+import 'package:provider/provider.dart';
 import '../Pages/uploadPage.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import '../Pages/loginSignupPage.dart';
+import '../Store/loginSignupData.dart';
 
 class TopAppBar extends StatefulWidget with PreferredSizeWidget{
   TopAppBar({Key? key, this.uploadData}) : super(key: key);
@@ -20,8 +23,14 @@ class _TopAppBarState extends State<TopAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text('Instagram'),
+      title: context.watch<LoginSignupData>().authentication.currentUser != null ?
+        Text(context.watch<LoginSignupData>().authentication.currentUser.toString()) : Text('Instagram'),
       actions: [
+        IconButton(onPressed: (){
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => const LoginSignupScreen())
+          );
+        }, icon: const Icon(Icons.star),),
         IconButton(onPressed: (){
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => const LoginSignup())
