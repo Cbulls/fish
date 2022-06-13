@@ -9,6 +9,7 @@ class HomeData extends ChangeNotifier {
   var boardItem = {};
   final fireStore = FirebaseFirestore.instance;
 
+
   late String _image;
   String get image => _image;
   late String _content;

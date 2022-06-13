@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import '../../../Store/loginSignupData.dart';
 
 class LoginSignupTextFormField extends StatelessWidget {
-  LoginSignupTextFormField({Key? key,
+  const LoginSignupTextFormField({Key? key,
     required this.valueKeyNumb,
     required this.textValue})
   : super(key: key);

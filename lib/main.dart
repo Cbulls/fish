@@ -32,11 +32,12 @@ void main() async{
           theme: theme.style,
           home: const MyApp(),
           debugShowCheckedModeBanner: false,
+          navigatorKey: navigatorKey,
         ),
       )
   );
 }
-
+final navigatorKey = GlobalKey<NavigatorState>();
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 

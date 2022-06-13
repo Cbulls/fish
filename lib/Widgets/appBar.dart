@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram/Pages/login.dart';
 import 'package:instagram/Widgets/notification.dart';
 import 'package:provider/provider.dart';
+import '../Pages/profilePage.dart';
 import '../Pages/uploadPage.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
@@ -22,20 +24,40 @@ class _TopAppBarState extends State<TopAppBar> {
 
   @override
   Widget build(BuildContext context) {
+    print('appbar userName : ${context.watch<LoginSignupData>().authentication.currentUser}');
     return AppBar(
-      title: context.watch<LoginSignupData>().authentication.currentUser != null ?
-        Text(context.watch<LoginSignupData>().authentication.currentUser.toString()) : Text('Instagram'),
+      title: context.watch<LoginSignupData>().authentication.currentUser?.displayName != null ?
+        Text(context.watch<LoginSignupData>().authentication.currentUser!.displayName.toString()) :
+      const Text('Instagram'),
       actions: [
         IconButton(onPressed: (){
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => const LoginSignupScreen())
           );
         }, icon: const Icon(Icons.star),),
-        IconButton(onPressed: (){
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => const LoginSignup())
-          );
-        }, icon: const Icon(Icons.account_box),),
+        StreamBuilder<User?>(
+            stream: context.watch<LoginSignupData>().authentication.authStateChanges(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return IconButton(onPressed: (){
+                Navigator.push(
+                  context, MaterialPageRoute(
+                    builder: (context) =>
+                      Profile(
+                        profileImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jordan_Lipofsky.jpg/180px-Jordan_Lipofsky.jpg',
+                        user: snapshot.data?.displayName,
+                      ))
+                );
+              }, icon: const Icon(Icons.star),);
+            }else{
+              return IconButton(onPressed: (){
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => const LoginSignup())
+                );
+              }, icon: const Icon(Icons.account_box),);
+            }
+          }
+        ),
         IconButton(onPressed: (){showNotification();}, icon: const Icon(Icons.notification_add),),
         IconButton(
             onPressed: () async{

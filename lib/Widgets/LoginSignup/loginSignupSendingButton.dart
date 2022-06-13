@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../Store/loginSignupData.dart';
-import '../../../main.dart';
+import '../../Store/loginSignupData.dart';
+import '../../main.dart';
 
 class LoginSignupSendingButton extends StatelessWidget {
   const LoginSignupSendingButton({Key? key}) : super(key: key);
-
-  // final authentication = FirebaseAuth.instance;
-  // final formKey = GlobalKey<FormState>();
-  // void tryValidation() {
-  //   final isValid = formKey.currentState!.validate();
-  //   if (isValid) {
-  //     formKey.currentState!.save();
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +24,9 @@ class LoginSignupSendingButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(50)),
           child: GestureDetector(
             onTap: () {
-              context.read<LoginSignupData>().signIn();
+              print('isSignup : ${context.read<LoginSignupData>().isSignup}');
+              context.read<LoginSignupData>().isSignup ?
+                context.read<LoginSignupData>().signUp(context) : context.read<LoginSignupData>().signIn();
               final isValid = context.read<LoginSignupData>().formKey.currentState!.validate();
               if (isValid) {
                 context.read<LoginSignupData>().formKey.currentState!.save();

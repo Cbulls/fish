@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:instagram/Pages/profilePage.dart';
 import 'package:instagram/Store/loginSignupData.dart';
-import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/loginSignupSendingButton.dart';
+import 'package:instagram/Widgets/LoginSignup/loginSignupSendingButton.dart';
 import 'package:instagram/Widgets/LoginSignup/loginSignupBackground.dart';
 import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/loginSignupTextfield.dart';
 import 'package:provider/provider.dart';
@@ -19,6 +20,7 @@ class _LoginSignupState extends State<LoginSignup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       // 바닥을 다시 측정해서 키보드 자판 올라가는거 방지
       resizeToAvoidBottomInset : false,
       // body를 appBar 뒤로 배치시켜서 appBar를 투명하게 만든다.
@@ -34,15 +36,7 @@ class _LoginSignupState extends State<LoginSignup> {
         backgroundColor: Colors.transparent,
       ),
       backgroundColor: Colors.blue,
-      body: StreamBuilder<User?>(
-        stream: context.watch<LoginSignupData>().authentication.authStateChanges(),
-        builder: (context, snapshot) {
-          if(snapshot.hasData){
-            print('loginSignupPage : $snapshot');
-            Navigator.pop(context);
-          }else {
-            print('fdsadfsdfsasadfasdfsdfa');
-            return GestureDetector(
+      body: GestureDetector(
               onTap: () {
                 // 키보드가 화면에 올라왔을 때 다른곳을 누르면 다시 내려가는 기능
                 FocusScope.of(context).unfocus();
@@ -96,11 +90,7 @@ class _LoginSignupState extends State<LoginSignup> {
                   //구글 로그인 버튼
                 ],
               ),
-            );
-          }
-          return Container();
-        }
-      ),
+            )
     );
   }
 }

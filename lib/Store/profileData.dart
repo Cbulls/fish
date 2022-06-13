@@ -5,6 +5,7 @@ import 'dart:convert';
 class ProfileData extends ChangeNotifier{
   var profileImgList = [];
   bool isFollow = false;
+  var profileImg;
 
   getProfileImgData() async{
     var rawData = await http.get(Uri.parse('https://codingapple1.github.io/app/profile.json'));
@@ -21,11 +22,12 @@ class ProfileData extends ChangeNotifier{
 
   putImage(image){
     if(image.runtimeType == String){
-      return NetworkImage(image);
+      profileImg = NetworkImage(image);
     }
     else{
-      return FileImage(image);
+      profileImg = FileImage(image);
     }
+    notifyListeners();
   }
 
   follow(){

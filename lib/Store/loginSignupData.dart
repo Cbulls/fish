@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import '../main.dart';
+
 class LoginSignupData extends ChangeNotifier{
   final authentication = FirebaseAuth.instance;
 
@@ -20,9 +22,41 @@ class LoginSignupData extends ChangeNotifier{
   }
 
   signIn() async{
-    await authentication.signInWithEmailAndPassword(
-        email: userEmail, password: userPassword
-    );
+    // showDialog(
+    //     context: context,
+    //     barrierDismissible: false,
+    //     builder: (context) => const Center(child: CircularProgressIndicator(),)
+    // );
+    try {
+      await authentication.signInWithEmailAndPassword(
+          email: userEmail.trim(), password: userPassword.trim()
+      );
+    } on FirebaseAuthException catch (e) {
+      print('SignIn FirebaseAuthException : $e');
+    }
+    notifyListeners();
+  }
+
+  signOut()async{
+    await authentication.signOut();
+  }
+
+  signUp(BuildContext context) async {
+    try{
+      UserCredential result = await authentication.createUserWithEmailAndPassword(
+          email: userEmail.trim(), password: userPassword.trim()
+      );
+      result.user!.updateDisplayName(userName);
+    } on FirebaseAuthException catch (e){
+      print('SignUp FirebaseAuthException : $e');
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content:
+          Text(e.toString()),
+          backgroundColor: Colors.yellow,
+        ),
+      );
+    }
     notifyListeners();
   }
 
