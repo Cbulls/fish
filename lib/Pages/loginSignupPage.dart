@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:instagram/Pages/profilePage.dart';
 import 'package:instagram/Store/loginSignupData.dart';
 import 'package:instagram/Widgets/LoginSignup/loginSignupSendingButton.dart';
 import 'package:instagram/Widgets/LoginSignup/loginSignupBackground.dart';
@@ -20,7 +18,6 @@ class _LoginSignupState extends State<LoginSignup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       // 바닥을 다시 측정해서 키보드 자판 올라가는거 방지
       resizeToAvoidBottomInset : false,
       // body를 appBar 뒤로 배치시켜서 appBar를 투명하게 만든다.
@@ -48,7 +45,7 @@ class _LoginSignupState extends State<LoginSignup> {
                   //텍스트 폼 필드
                   LoginSignupTextfield(),
                   //전송버튼
-                  LoginSignupSendingButton(),
+                  const LoginSignupSendingButton(),
                   AnimatedPositioned(
                     duration: const Duration(milliseconds: 500),
                     curve: Curves.easeIn,

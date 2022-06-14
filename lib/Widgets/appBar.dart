@@ -44,8 +44,9 @@ class _TopAppBarState extends State<TopAppBar> {
                   context, MaterialPageRoute(
                     builder: (context) =>
                       Profile(
-                        profileImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jordan_Lipofsky.jpg/180px-Jordan_Lipofsky.jpg',
-                        user: snapshot.data?.displayName,
+                        profileImage: snapshot.data?.photoURL ?? 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jordan_Lipofsky.jpg/180px-Jordan_Lipofsky.jpg',
+                        // user: snapshot.data!.displayName,
+                        user: snapshot.data?.displayName ?? 'fdasadf',
                       ))
                 );
               }, icon: const Icon(Icons.star),);

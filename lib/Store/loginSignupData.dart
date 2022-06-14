@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import '../main.dart';
-
 class LoginSignupData extends ChangeNotifier{
   final authentication = FirebaseAuth.instance;
 
   bool isSignup = true;
-  bool isSignupValid = false;
+  bool isSignupValid = true;
   final formKey = GlobalKey<FormState>();
   String userName = '';
   String userEmail = '';
@@ -21,39 +19,66 @@ class LoginSignupData extends ChangeNotifier{
     notifyListeners();
   }
 
-  signIn() async{
-    // showDialog(
-    //     context: context,
-    //     barrierDismissible: false,
-    //     builder: (context) => const Center(child: CircularProgressIndicator(),)
-    // );
+  signIn(BuildContext context) async{
     try {
+      !isSignupValid ? isSignupValid = true : null;
       await authentication.signInWithEmailAndPassword(
           email: userEmail.trim(), password: userPassword.trim()
       );
-    } on FirebaseAuthException catch (e) {
-      print('SignIn FirebaseAuthException : $e');
+    } on FirebaseAuthException catch (errorCode) {
+      isSignupValid = false;
+      print('isSignupValid : $isSignupValid');
+      print('SignIn FirebaseAuthException : $errorCode');
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(getMessageFromErrorCode(errorCode.code)),
+          backgroundColor: Colors.red,
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(24),
+          ),
+          margin: EdgeInsets.only(
+              bottom: MediaQuery.of(context).size.height - 100,
+              right: 20,
+              left: 20),
+        ),
+      );
     }
     notifyListeners();
   }
 
   signOut()async{
-    await authentication.signOut();
+    try{
+      await authentication.signOut();
+      isSignup = false;
+    } on FirebaseAuthException catch(errorCode){
+      print('SignOut FirebaseAuthException : $errorCode');
+    }
+    notifyListeners();
   }
 
   signUp(BuildContext context) async {
     try{
+      !isSignupValid ? isSignupValid = true : null;
       UserCredential result = await authentication.createUserWithEmailAndPassword(
           email: userEmail.trim(), password: userPassword.trim()
       );
-      result.user!.updateDisplayName(userName);
-    } on FirebaseAuthException catch (e){
-      print('SignUp FirebaseAuthException : $e');
+      await result.user!.updateDisplayName(userName);
+    } on FirebaseAuthException catch (errorCode){
+      isSignupValid = false;
+      print('SignUp FirebaseAuthException : $errorCode.code');
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content:
-          Text(e.toString()),
-          backgroundColor: Colors.yellow,
+          content: Text(getMessageFromErrorCode(errorCode.code)),
+          backgroundColor: Colors.red,
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(24),
+          ),
+          margin: EdgeInsets.only(
+              bottom: MediaQuery.of(context).size.height - 100,
+              right: 20,
+              left: 20),
         ),
       );
     }
@@ -65,26 +90,20 @@ class LoginSignupData extends ChangeNotifier{
     if (isValid) {
       formKey.currentState!.save();
       isSignupValid = true;
-      notifyListeners();
     }
-    notifyListeners();
-  }
-
-  makeIsSignupValidFalse(status){
-    isSignupValid = status;
     notifyListeners();
   }
 
   changeTextData(textValue, value){
     switch(textValue){
       case 'password':
-        userPassword = value;
+        userPassword = value!;
         break;
       case 'username':
-        userName = value;
+        userName = value!;
         break;
       case 'email':
-        userEmail = value;
+        userEmail = value!;
         break;
     }
   }
@@ -93,13 +112,11 @@ class LoginSignupData extends ChangeNotifier{
     switch(textValue){
       case 'password':
         if (value!.isEmpty || value.length < 6) {
-          print('password : $value');
           return 'Password must be at least 7 characters long.';
         }
         return null;
       case 'username':
         if (value!.isEmpty || value.length < 4) {
-          print('username : $value');
           return 'Please enter at least 4 characters';
         }
         return null;
@@ -127,32 +144,56 @@ class LoginSignupData extends ChangeNotifier{
   }
 
   returnDecoration(textValue){
-        return InputDecoration(
-            prefixIcon: Icon(
-              returnIcon(textValue),
-              color: Colors.green,
+      return InputDecoration(
+          prefixIcon: Icon(
+            returnIcon(textValue),
+            color: Colors.green,
+          ),
+          enabledBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+                color: Colors.blueGrey),
+            borderRadius: BorderRadius.all(
+              Radius.circular(35.0),
             ),
-            enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(
-                  color: Colors.blueGrey),
-              borderRadius: BorderRadius.all(
-                Radius.circular(35.0),
-              ),
+          ),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+                color: Colors.lightBlue),
+            borderRadius: BorderRadius.all(
+              Radius.circular(35.0),
             ),
-            focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(
-                  color: Colors.lightBlue),
-              borderRadius: BorderRadius.all(
-                Radius.circular(35.0),
-              ),
-            ),
-            hintText: textValue,
-            hintStyle: const TextStyle(
-                fontSize: 14,
-                color: Colors.black),
-            contentPadding: const EdgeInsets.all(10),
-            // errorText: validate(userPassword, 'password')
-        );
+          ),
+          hintText: textValue,
+          hintStyle: const TextStyle(
+              fontSize: 14,
+              color: Colors.black),
+          contentPadding: const EdgeInsets.all(10),
+      );
+  }
 
+  String getMessageFromErrorCode(errorCode) {
+    switch (errorCode) {
+      case "ERROR_EMAIL_ALREADY_IN_USE":
+      case "account-exists-with-different-credential":
+      case "email-already-in-use":
+        return "Email already used. Go to login page.";
+      case "ERROR_WRONG_PASSWORD":
+      case "wrong-password":
+        return "Wrong email/password combination.";
+      case "ERROR_USER_NOT_FOUND":
+      case "user-not-found":
+        return "No user found with this email.";
+      case "ERROR_USER_DISABLED":
+      case "user-disabled":
+        return "User disabled.";
+      case "ERROR_OPERATION_NOT_ALLOWED":
+      case "operation-not-allowed":
+        return "Server error, please try again later.";
+      case "ERROR_INVALID_EMAIL":
+      case "invalid-email":
+        return "Email address is invalid.";
+      default:
+        return "Login failed. Please try again.";
+    }
   }
 }

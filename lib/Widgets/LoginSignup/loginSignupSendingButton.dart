@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../Store/loginSignupData.dart';
-import '../../main.dart';
 
 class LoginSignupSendingButton extends StatelessWidget {
   const LoginSignupSendingButton({Key? key}) : super(key: key);
 
+   //error
   @override
   Widget build(BuildContext context) {
+    var read = context.read<LoginSignupData>();
     return AnimatedPositioned(
       duration: const Duration(milliseconds: 500),
       curve: Curves.easeIn,
-      top: context.watch<LoginSignupData>().isSignup ? 520 : 470,
+      top: read.isSignup ? 520 : 490,
       right: 0,
       left: 0,
       child: Center(
@@ -24,80 +25,20 @@ class LoginSignupSendingButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(50)),
           child: GestureDetector(
             onTap: () {
-              print('isSignup : ${context.read<LoginSignupData>().isSignup}');
-              context.read<LoginSignupData>().isSignup ?
-                context.read<LoginSignupData>().signUp(context) : context.read<LoginSignupData>().signIn();
-              final isValid = context.read<LoginSignupData>().formKey.currentState!.validate();
-              if (isValid) {
-                context.read<LoginSignupData>().formKey.currentState!.save();
-                Navigator.push(
-                            context, MaterialPageRoute(builder: (context) => const MyApp()));
+              print('isSignup : ${read.isSignup}');
+              read.isSignup ? read.signUp(context) : read.signIn(context);
+              final isValid = read.formKey.currentState!.validate();
+              if (isValid && read.isSignupValid) {
+                read.formKey.currentState!.save();
               }
+              // isSignupValid가 false로 바뀌기 전에 동작하는 것을 막기 위해 텀을 준다.
+              Future.delayed(const Duration(milliseconds : 1000),() {
+                if(read.isSignupValid){
+                  print('isSignupValid : ${read.isSignupValid}');
+                  Navigator.pop(context);
+                }
+              });
             },
-            // onTap: () async {
-            //   if (context.watch<LoginSignupData>().isSignup) {
-            //     context.watch<LoginSignupData>().tryValidation();
-            //       // final isValid = context.read<LoginSignupData>().formKey.currentState!.validate();
-            //       // if (isValid) {
-            //       //   context.read<LoginSignupData>().formKey.currentState!.save();
-            //       // }
-            //     try {
-            //       await  context.read<LoginSignupData>().authentication
-            //           .createUserWithEmailAndPassword(
-            //         email:  context.watch<LoginSignupData>().userEmail,
-            //         password: context.watch<LoginSignupData>().userPassword,
-            //       );
-            //
-            //       if (newUser.user != null) {
-            //         Navigator.push(
-            //           context,
-            //           MaterialPageRoute(
-            //             builder: (context) {
-            //               return MyApp();
-            //             },
-            //           ),
-            //         );
-            //       }
-            //     } catch (e) {
-            //       print(e);
-            //       ScaffoldMessenger.of(context).showSnackBar(
-            //         SnackBar(
-            //           content:
-            //           Text('Please check your email and password'),
-            //           backgroundColor: Colors.blue,
-            //         ),
-            //       );
-            //     }
-            //   }
-            //   if (!context.watch<LoginSignupData>().isSignup) {
-            //     // context.read<LoginSignupData>().tryValidation();
-            //       final isValid = context.read<LoginSignupData>().formKey.currentState!.validate();
-            //       if (isValid) {
-            //         context.read<LoginSignupData>().formKey.currentState!.save();
-            //         // Navigator.push(
-            //         //             context, MaterialPageRoute(builder: (context) => const MyApp()));
-            //       }
-            //     try {
-            //       final newUser =
-            //       await context.read<LoginSignupData>().authentication.signInWithEmailAndPassword(
-            //         email: context.watch<LoginSignupData>().userEmail,
-            //         password: context.watch<LoginSignupData>().userPassword,
-            //       );
-            //       if (newUser.user != null) {
-            //         Navigator.push(
-            //           context,
-            //           MaterialPageRoute(
-            //             builder: (context) {
-            //               return MyApp();
-            //             },
-            //           ),
-            //         );
-            //       }
-            //     }catch(e){
-            //       print(e);
-            //     }
-            //   }
-            // },
             child: Container(
               decoration: BoxDecoration(
                 gradient: const LinearGradient(

@@ -19,7 +19,6 @@ class LoginSignupTextFormField extends StatelessWidget {
           obscureText: true,
           validator: (value){
             if (value!.isEmpty || value.length < 6) {
-              print('password : $value');
               return 'Password must be at least 7 characters long.';
             }
             return null;

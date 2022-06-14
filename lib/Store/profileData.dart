@@ -23,11 +23,12 @@ class ProfileData extends ChangeNotifier{
   putImage(image){
     if(image.runtimeType == String){
       profileImg = NetworkImage(image);
+      return profileImg;
     }
     else{
       profileImg = FileImage(image);
+      return profileImg;
     }
-    notifyListeners();
   }
 
   follow(){

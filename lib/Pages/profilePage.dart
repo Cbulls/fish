@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../Store/loginSignupData.dart';
 import '../Store/profileData.dart';
-import '../main.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key, this.profileImage, this.user}) : super(key: key);
@@ -18,7 +17,6 @@ class _ProfileState extends State<Profile> {
   @override
   void initState(){
     super.initState();
-    context.read<ProfileData>().putImage(widget.profileImage);
     context.read<ProfileData>().getProfileImgData();
   }
 
@@ -47,7 +45,7 @@ class _ProfileState extends State<Profile> {
                 children: [
                   CircleAvatar(
                     radius: 40,
-                    foregroundImage: context.watch<ProfileData>().profileImg,
+                    foregroundImage: context.read<ProfileData>().putImage(widget.profileImage),
                   ),
                   Text(widget.user, style: const TextStyle(
                     fontSize: 20
@@ -56,7 +54,6 @@ class _ProfileState extends State<Profile> {
                     color: context.watch<ProfileData>().isFollow ? Colors.red : Colors.grey,
                     onPressed: (){
                       context.read<ProfileData>().follow();
-                      // 로그아웃
                       context.read<LoginSignupData>().signOut();
                       },
                     icon: const Icon(Icons.favorite)
