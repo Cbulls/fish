@@ -5,14 +5,13 @@ import '../../Store/loginSignupData.dart';
 class LoginSignupSendingButton extends StatelessWidget {
   const LoginSignupSendingButton({Key? key}) : super(key: key);
 
-   //error
   @override
   Widget build(BuildContext context) {
     var read = context.read<LoginSignupData>();
     return AnimatedPositioned(
       duration: const Duration(milliseconds: 500),
       curve: Curves.easeIn,
-      top: read.isSignup ? 520 : 490,
+      top: context.watch<LoginSignupData>().isSignup ? 520 : 490,
       right: 0,
       left: 0,
       child: Center(
@@ -25,7 +24,6 @@ class LoginSignupSendingButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(50)),
           child: GestureDetector(
             onTap: () {
-              print('isSignup : ${read.isSignup}');
               read.isSignup ? read.signUp(context) : read.signIn(context);
               final isValid = read.formKey.currentState!.validate();
               if (isValid && read.isSignupValid) {

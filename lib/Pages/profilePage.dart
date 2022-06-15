@@ -28,8 +28,6 @@ class _ProfileState extends State<Profile> {
           icon: const Icon(Icons.arrow_back),
           onPressed: (){
             Navigator.pop(context);
-            //   Navigator.push(
-            //       context, MaterialPageRoute(builder: (context) => const MyApp())
           },
           color: Theme.of(context).iconTheme.color,
         ),

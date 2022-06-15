@@ -4,6 +4,7 @@ import 'package:instagram/Widgets/LoginSignup/loginSignupSendingButton.dart';
 import 'package:instagram/Widgets/LoginSignup/loginSignupBackground.dart';
 import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/loginSignupTextfield.dart';
 import 'package:provider/provider.dart';
+import '../Widgets/LoginSignup/LoginSignupTextfield/signupProfileImage.dart';
 
 class LoginSignup extends StatefulWidget {
   const LoginSignup({Key? key}) : super(key: key);
@@ -42,6 +43,8 @@ class _LoginSignupState extends State<LoginSignup> {
                 children: [
                   //배경
                   const LoginSignupBackground(),
+                  //프로필 이미지
+                  context.watch<LoginSignupData>().isSignup ? SignupProfileImage() : Container(),
                   //텍스트 폼 필드
                   LoginSignupTextfield(),
                   //전송버튼
@@ -49,17 +52,8 @@ class _LoginSignupState extends State<LoginSignup> {
                   AnimatedPositioned(
                     duration: const Duration(milliseconds: 500),
                     curve: Curves.easeIn,
-                    top: context
-                        .watch<LoginSignupData>()
-                        .isSignup
-                        ? MediaQuery
-                        .of(context)
-                        .size
-                        .height - 125
-                        : MediaQuery
-                        .of(context)
-                        .size
-                        .height - 165,
+                    top: context.watch<LoginSignupData>().isSignup ?
+                    MediaQuery.of(context).size.height - 125 : MediaQuery.of(context).size.height - 165,
                     right: 0,
                     left: 0,
                     child: Column(

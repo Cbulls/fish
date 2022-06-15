@@ -30,11 +30,11 @@ class _TopAppBarState extends State<TopAppBar> {
         Text(context.watch<LoginSignupData>().authentication.currentUser!.displayName.toString()) :
       const Text('Instagram'),
       actions: [
-        IconButton(onPressed: (){
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => const LoginSignupScreen())
-          );
-        }, icon: const Icon(Icons.star),),
+        // IconButton(onPressed: (){
+        //   Navigator.push(
+        //       context, MaterialPageRoute(builder: (context) => const LoginSignupScreen())
+        //   );
+        // }, icon: const Icon(Icons.star),),
         StreamBuilder<User?>(
             stream: context.watch<LoginSignupData>().authentication.authStateChanges(),
           builder: (context, snapshot) {
@@ -44,9 +44,9 @@ class _TopAppBarState extends State<TopAppBar> {
                   context, MaterialPageRoute(
                     builder: (context) =>
                       Profile(
-                        profileImage: snapshot.data?.photoURL ?? 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jordan_Lipofsky.jpg/180px-Jordan_Lipofsky.jpg',
+                        profileImage: snapshot.data!.photoURL ?? 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jordan_Lipofsky.jpg/180px-Jordan_Lipofsky.jpg',
                         // user: snapshot.data!.displayName,
-                        user: snapshot.data?.displayName ?? 'fdasadf',
+                        user: snapshot.data!.displayName ?? 'fdasadf',
                       ))
                 );
               }, icon: const Icon(Icons.star),);
@@ -59,7 +59,7 @@ class _TopAppBarState extends State<TopAppBar> {
             }
           }
         ),
-        IconButton(onPressed: (){showNotification();}, icon: const Icon(Icons.notification_add),),
+        // IconButton(onPressed: (){showNotification();}, icon: const Icon(Icons.notification_add),),
         IconButton(
             onPressed: () async{
               var picker = ImagePicker();
@@ -75,6 +75,10 @@ class _TopAppBarState extends State<TopAppBar> {
               );
             },
             icon: const Icon(Icons.add_box_outlined)
+        ),
+        IconButton(
+          icon: const Icon(Icons.settings),
+          onPressed: (){},
         )
       ],
     );

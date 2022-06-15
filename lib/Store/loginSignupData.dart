@@ -1,5 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/signupProfileImage.dart';
 
 class LoginSignupData extends ChangeNotifier{
   final authentication = FirebaseAuth.instance;
@@ -108,6 +110,15 @@ class LoginSignupData extends ChangeNotifier{
     }
   }
 
+
+  changeProfileImage(){
+    if(isSignup){
+      return SignupProfileImage();
+    }else{
+      return Container();
+    }
+  }
+
   validate(value, textValue){
     switch(textValue){
       case 'password':
@@ -141,6 +152,29 @@ class LoginSignupData extends ChangeNotifier{
       case 'email':
         return Icons.email;
     }
+  }
+
+  returnNoProfileImage(){
+    return ClipOval(
+        child: Image.asset(
+          'assets/face.jpg',
+          height: 50.0,
+          width: 50.0,
+          fit: BoxFit.fill,
+        ),
+      );
+  }
+
+  returnProfileImage(imagePath){
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(50),
+      child: Image.file(
+        File(imagePath),
+        height: 50.0,
+        width: 50.0,
+        fit: BoxFit.fill,
+      ),
+    );
   }
 
   returnDecoration(textValue){
