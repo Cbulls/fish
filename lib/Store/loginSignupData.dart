@@ -23,10 +23,12 @@ class LoginSignupData extends ChangeNotifier{
 
   signIn(BuildContext context) async{
     try {
+      final navigator = Navigator.of(context);
       !isSignupValid ? isSignupValid = true : null;
       await authentication.signInWithEmailAndPassword(
           email: userEmail.trim(), password: userPassword.trim()
       );
+      navigator.pop();
     } on FirebaseAuthException catch (errorCode) {
       isSignupValid = false;
       print('isSignupValid : $isSignupValid');
@@ -59,13 +61,17 @@ class LoginSignupData extends ChangeNotifier{
     notifyListeners();
   }
 
-  signUp(BuildContext context) async {
+  signUp(BuildContext context, image) async {
     try{
+      final navigator = Navigator.of(context);
       !isSignupValid ? isSignupValid = true : null;
       UserCredential result = await authentication.createUserWithEmailAndPassword(
           email: userEmail.trim(), password: userPassword.trim()
       );
       await result.user!.updateDisplayName(userName);
+      await result.user!.updatePhotoURL(image.path);
+      // 회원가입 성공 후 종료
+      navigator.pop();
     } on FirebaseAuthException catch (errorCode){
       isSignupValid = false;
       print('SignUp FirebaseAuthException : $errorCode.code');
@@ -78,20 +84,11 @@ class LoginSignupData extends ChangeNotifier{
             borderRadius: BorderRadius.circular(24),
           ),
           margin: EdgeInsets.only(
-              bottom: MediaQuery.of(context).size.height - 100,
-              right: 20,
-              left: 20),
+            bottom: MediaQuery.of(context).size.height - 100,
+            right: 20,
+            left: 20),
         ),
       );
-    }
-    notifyListeners();
-  }
-
-  tryValidation() {
-    final isValid = formKey.currentState!.validate();
-    if (isValid) {
-      formKey.currentState!.save();
-      isSignupValid = true;
     }
     notifyListeners();
   }
@@ -165,11 +162,11 @@ class LoginSignupData extends ChangeNotifier{
       );
   }
 
-  returnProfileImage(imagePath){
+  returnProfileImage(image){
     return ClipRRect(
       borderRadius: BorderRadius.circular(50),
       child: Image.file(
-        File(imagePath),
+        File(image.path),
         height: 50.0,
         width: 50.0,
         fit: BoxFit.fill,

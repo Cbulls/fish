@@ -64,9 +64,9 @@ class _ProfileState extends State<Profile> {
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10.0, crossAxisSpacing: 10.0),
             delegate: SliverChildBuilderDelegate(
                   (context, index) => Image.network(
-                      context.watch<ProfileData>().profileImgList[index]
+                      context.watch<ProfileData>().imageListInProfile[index]
                   ),
-              childCount: context.watch<ProfileData>().profileImgList.length,
+              childCount: context.watch<ProfileData>().imageListInProfile.length,
             ),
           ),
         ],

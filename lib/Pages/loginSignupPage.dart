@@ -44,7 +44,7 @@ class _LoginSignupState extends State<LoginSignup> {
                   //배경
                   const LoginSignupBackground(),
                   //프로필 이미지
-                  context.watch<LoginSignupData>().isSignup ? SignupProfileImage() : Container(),
+                  context.watch<LoginSignupData>().isSignup ? SignupProfileImage() : const SizedBox(),
                   //텍스트 폼 필드
                   LoginSignupTextfield(),
                   //전송버튼

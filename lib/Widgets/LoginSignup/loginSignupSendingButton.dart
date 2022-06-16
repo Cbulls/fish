@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/Store/profileData.dart';
 import 'package:provider/provider.dart';
 import '../../Store/loginSignupData.dart';
 
@@ -23,19 +24,12 @@ class LoginSignupSendingButton extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(50)),
           child: GestureDetector(
-            onTap: () {
-              read.isSignup ? read.signUp(context) : read.signIn(context);
+            onTap: (){
+              read.isSignup ? read.signUp(context, context.read<ProfileData>().profileImage) : read.signIn(context);
               final isValid = read.formKey.currentState!.validate();
               if (isValid && read.isSignupValid) {
                 read.formKey.currentState!.save();
               }
-              // isSignupValid가 false로 바뀌기 전에 동작하는 것을 막기 위해 텀을 준다.
-              Future.delayed(const Duration(milliseconds : 1000),() {
-                if(read.isSignupValid){
-                  print('isSignupValid : ${read.isSignupValid}');
-                  Navigator.pop(context);
-                }
-              });
             },
             child: Container(
               decoration: BoxDecoration(
