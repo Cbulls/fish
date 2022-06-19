@@ -47,8 +47,8 @@ class _TopAppBarState extends State<TopAppBar> {
                                 builder: (context) => Profile(
                                       profileImage: snapshot.data!.photoURL ??
                                           'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jordan_Lipofsky.jpg/180px-Jordan_Lipofsky.jpg',
-                                      user: snapshot.data!.displayName ??
-                                          'fdasadf',
+                                      user:
+                                          snapshot.data!.displayName ?? '이름없음',
                                     )));
                       },
                       icon: const Icon(Icons.star),
