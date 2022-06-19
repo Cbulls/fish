@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../Store/loginSignupData.dart';
-import '../Store/profileData.dart';
+import '../Methods/loginSignupMethods.dart';
+import '../Methods/profileMethods.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key, this.profileImage, this.user}) : super(key: key);
@@ -43,7 +43,9 @@ class _ProfileState extends State<Profile> {
                 children: [
                   CircleAvatar(
                     radius: 40,
-                    foregroundImage: context.read<ProfileData>().putImage(widget.profileImage),
+                    foregroundImage: widget.profileImage != null ?
+                    context.read<ProfileData>().putImage(widget.profileImage) :
+                    context.read<ProfileData>().imageInProfile,
                   ),
                   Text(widget.user, style: const TextStyle(
                     fontSize: 20

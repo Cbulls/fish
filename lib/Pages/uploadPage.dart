@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import '../Store/homeData.dart';
-import '../Store/profileData.dart';
+import '../Methods/homeMethods.dart';
+import '../Methods/profileMethods.dart';
 
 class Upload extends StatefulWidget {
   const Upload({Key? key}) : super(key: key);
@@ -22,7 +22,6 @@ class _UploadState extends State<Upload> {
   }
 
   @override
-
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -34,35 +33,29 @@ class _UploadState extends State<Upload> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('업로드 날짜 : ${DateFormat('MMM dd').format(now)}'),
-              context.read<ProfileData>().showImage(
-                context.read<ProfileData>().uploadedImage
-              ),
+              context
+                  .read<ProfileData>()
+                  .showImage(context.read<ProfileData>().uploadedImage),
               TextField(
                 controller: textController,
-                decoration: const InputDecoration(
-                    hintText: '설명'
-                ),
+                decoration: const InputDecoration(hintText: '설명을 적어주세요~'),
               ),
               IconButton(
-                onPressed: (){
-                  Navigator.pop(context);
-                },
-                icon: const Icon(Icons.close)
-              ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.close)),
               IconButton(
-                onPressed: (){
-                  context.read<HomeData>().putData(
-                    context.read<ProfileData>().uploadedImage,
-                    textController.text,
-                    now
-                  );
-                  Navigator.pop(context);
-                },
-                icon: const Icon(Icons.add)
-              ),
+                  onPressed: () {
+                    context.read<HomeData>().putData(
+                        context.read<ProfileData>().uploadedImage,
+                        textController.text,
+                        now);
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.add)),
             ],
           ),
-        )
-    );
+        ));
   }
 }

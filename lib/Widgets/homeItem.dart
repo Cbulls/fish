@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/Store/homeData.dart';
+import 'package:instagram/Methods/homeMethods.dart';
 import 'package:provider/provider.dart';
 import '../Pages/profilePage.dart';
 
@@ -48,6 +48,6 @@ class _HomeItemState extends State<HomeItem> {
         );
       });
     }
-    return const Text('잘 안되네요');
+    return const SizedBox();
   }
 }

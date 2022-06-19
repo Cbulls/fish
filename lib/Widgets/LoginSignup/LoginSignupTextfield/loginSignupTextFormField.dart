@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../Store/loginSignupData.dart';
+import '../../../Methods/loginSignupMethods.dart';
+import '../../../Constants/loginSignupConstants.dart';
 
 class LoginSignupTextFormField extends StatelessWidget {
   const LoginSignupTextFormField({Key? key,
@@ -13,6 +14,7 @@ class LoginSignupTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var read = context.read<LoginSignupData>();
     switch(textValue){
       case 'password':
         return TextFormField(
@@ -25,30 +27,29 @@ class LoginSignupTextFormField extends StatelessWidget {
           },
           key: ValueKey(valueKeyNumb),
           onSaved: (value) {
-            context.read<LoginSignupData>().changeTextData(textValue, value);
+            read.changeTextData(textValue, value);
           },
           onChanged: (value) {
-            context.read<LoginSignupData>().changeTextData(textValue, value);
+            read.changeTextData(textValue, value);
           },
-          decoration: context.read<LoginSignupData>().returnDecoration(textValue),
+          decoration: returnDecoration(textValue),
         );
       case 'username':
         return TextFormField(
           validator: (value){
             if (value!.isEmpty || value.length < 4) {
-              print('username : $value');
               return 'Please enter at least 4 characters';
             }
             return null;
           },
           key: ValueKey(valueKeyNumb),
           onSaved: (value) {
-            context.read<LoginSignupData>().changeTextData(textValue, value);
+            read.changeTextData(textValue, value);
           },
           onChanged: (value) {
-            context.read<LoginSignupData>().changeTextData(textValue, value);
+            read.changeTextData(textValue, value);
           },
-          decoration: context.read<LoginSignupData>().returnDecoration(textValue),
+          decoration: returnDecoration(textValue),
         );
       case 'email':
         return TextFormField(
@@ -62,12 +63,12 @@ class LoginSignupTextFormField extends StatelessWidget {
           },
           key: ValueKey(valueKeyNumb),
           onSaved: (value) {
-            context.read<LoginSignupData>().changeTextData(textValue, value);
+            read.changeTextData(textValue, value);
           },
           onChanged: (value) {
-            context.read<LoginSignupData>().changeTextData(textValue, value);
+            read.changeTextData(textValue, value);
           },
-          decoration: context.read<LoginSignupData>().returnDecoration(textValue),
+          decoration: returnDecoration(textValue),
         );
     }
     return Container();

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:instagram/Store/loginSignupData.dart';
 // import 'package:timezone/data/latest_all.dart' as tz;
 // import 'package:timezone/timezone.dart' as tz;
 
 final notifications = FlutterLocalNotificationsPlugin();
 
 initNotification() async {
-
   //안드로이드용 아이콘파일
   var androidSetting = const AndroidInitializationSettings('transparent_fish');
 
@@ -18,10 +16,8 @@ initNotification() async {
     requestSoundPermission: true,
   );
 
-  var initializationSettings = InitializationSettings(
-      android: androidSetting,
-      iOS: iosSetting
-  );
+  var initializationSettings =
+      InitializationSettings(android: androidSetting, iOS: iosSetting);
   await notifications.initialize(
     initializationSettings,
     //알림 누를때 함수실행하고 싶으면
@@ -31,7 +27,6 @@ initNotification() async {
 
 //2. 이 함수 원하는 곳에서 실행하면 알림 뜸
 showNotification() async {
-
   var androidDetails = const AndroidNotificationDetails(
     '유니크한 알림 채널 ID',
     '알림종류 설명',
@@ -47,10 +42,6 @@ showNotification() async {
   );
 
   // 알림 id, 제목, 내용 맘대로 채우기
-  notifications.show(
-      1,
-      '제목1',
-      '내용1',
-      NotificationDetails(android: androidDetails, iOS: iosDetails)
-  );
+  notifications.show(1, '제목1', '내용1',
+      NotificationDetails(android: androidDetails, iOS: iosDetails));
 }

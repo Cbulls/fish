@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/loginSignupTextFormField.dart';
 import 'package:provider/provider.dart';
-import '../../../Store/loginSignupData.dart';
+import '../../../Methods/loginSignupMethods.dart';
 import './loginSignupTap.dart';
 
 class LoginSignupTextfield extends StatelessWidget {

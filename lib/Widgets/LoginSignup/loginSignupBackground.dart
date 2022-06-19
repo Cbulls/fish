@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../Store/loginSignupData.dart';
+import '../../Methods/loginSignupMethods.dart';
 
 class LoginSignupBackground extends StatelessWidget {
   const LoginSignupBackground({Key? key}) : super(key: key);

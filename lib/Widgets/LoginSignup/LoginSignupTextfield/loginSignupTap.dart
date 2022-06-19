@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../Store/loginSignupData.dart';
+import '../../../Methods/loginSignupMethods.dart';
 
 class LoginSignupTap extends StatelessWidget {
   const LoginSignupTap({Key? key, required this.text}) : super(key: key);

@@ -37,6 +37,7 @@ class HomeData extends ChangeNotifier {
       boardItem['user'] = 'GilDong Hong';
       boardItem['liked'] = false;
       boardItem['date'] =  DateFormat('MMM dd').format(now);
+      // 여기를 또 바꿔야 함
       boardItem['image'] = image;
       boardItem['content'] = content;
       print('업로드 $boardItem');

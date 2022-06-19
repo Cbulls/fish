@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/Store/homeData.dart';
-import 'package:instagram/Store/profileData.dart';
-import 'package:instagram/Store/loginSignupData.dart';
+import 'package:instagram/Methods/homeMethods.dart';
+import 'package:instagram/Methods/profileMethods.dart';
+import 'package:instagram/Methods/loginSignupMethods.dart';
 import 'package:instagram/widgets/bottomBar.dart';
 // 그냥 style 변수는 다른 style 변수가 생겨 겹칠 수도 있어서 as theme을 만든다
 import 'Widgets/notification.dart';
 import 'constants/theme.dart' as theme;
-import 'Pages/bodyPage.dart';
+import './Pages/bodyPage.dart';
 import 'widgets/appBar.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
