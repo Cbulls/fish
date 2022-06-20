@@ -13,9 +13,8 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-
   @override
-  void initState(){
+  void initState() {
     super.initState();
     context.read<ProfileData>().getProfileImgData();
   }
@@ -26,7 +25,7 @@ class _ProfileState extends State<Profile> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
           color: Theme.of(context).iconTheme.color,
@@ -36,45 +35,53 @@ class _ProfileState extends State<Profile> {
       body: CustomScrollView(
         slivers: [
           SliverPadding(
-            padding: const EdgeInsets.only(top: 10, bottom : 10),
+            padding: const EdgeInsets.only(top: 10, bottom: 10),
             sliver: SliverToBoxAdapter(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CircleAvatar(
                     radius: 40,
-                    foregroundImage: widget.profileImage != null ?
-                    context.read<ProfileData>().putImage(widget.profileImage) :
-                    context.read<ProfileData>().imageInProfile,
+                    foregroundImage: widget.profileImage != null
+                        ? context
+                            .read<ProfileData>()
+                            .putImage(widget.profileImage)
+                        : context.read<ProfileData>().imageInProfile,
                   ),
-                  Text(widget.user, style: const TextStyle(
-                    fontSize: 20
-                  ),),
+                  Text(
+                    widget.user,
+                    style: const TextStyle(fontSize: 20),
+                  ),
                   IconButton(
-                    color: context.watch<ProfileData>().isFollow ? Colors.red : Colors.grey,
-                    onPressed: (){
-                      context.read<ProfileData>().follow();
-                      context.read<LoginSignupData>().signOut();
+                      color: context.watch<ProfileData>().isFollow
+                          ? Colors.red
+                          : Colors.grey,
+                      onPressed: () {
+                        context.read<ProfileData>().follow();
+                        context.read<LoginSignupData>().signOut();
+                        setState(() {
+                          context.read<LoginSignupData>().userData = null;
+                        });
                       },
-                    icon: const Icon(Icons.favorite)
-                  )
+                      icon: const Icon(Icons.favorite))
                 ],
               ),
             ),
           ),
           SliverGrid(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10.0, crossAxisSpacing: 10.0),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 10.0,
+                crossAxisSpacing: 10.0),
             delegate: SliverChildBuilderDelegate(
-                  (context, index) => Image.network(
-                      context.watch<ProfileData>().imageListInProfile[index]
-                  ),
-              childCount: context.watch<ProfileData>().imageListInProfile.length,
+              (context, index) => Image.network(
+                  context.watch<ProfileData>().imageListInProfile[index]),
+              childCount:
+                  context.watch<ProfileData>().imageListInProfile.length,
             ),
           ),
         ],
-      )
+      ),
     );
   }
 }
-
-

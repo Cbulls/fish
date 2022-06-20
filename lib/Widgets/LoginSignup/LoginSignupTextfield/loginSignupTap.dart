@@ -6,18 +6,18 @@ class LoginSignupTap extends StatelessWidget {
   const LoginSignupTap({Key? key, required this.text}) : super(key: key);
   final String text;
 
-  changeTapColor(text, bool value){
-    if(text == 'LOG IN'){
-      if(!value){
+  changeTapColor(text, bool value) {
+    if (text == 'LOG IN') {
+      if (!value) {
         return Colors.amber;
-      } else{
+      } else {
         return Colors.grey;
       }
     }
-    if(text == 'SIGN UP'){
-      if(value){
+    if (text == 'SIGN UP') {
+      if (value) {
         return Colors.amber;
-      } else{
+      } else {
         return Colors.grey;
       }
     }
@@ -25,21 +25,23 @@ class LoginSignupTap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final read = context.read<LoginSignupData>();
+    final watch = context.watch<LoginSignupData>();
     return GestureDetector(
       onTap: () {
-        text=='LOG IN' ? context.read<LoginSignupData>().changeBool(false) : context.read<LoginSignupData>().changeBool(true);
+        text == 'LOG IN' ? read.changeBool(false) : read.changeBool(true);
       },
       child: Column(
         children: [
           Text(
             text,
             style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: changeTapColor(text, context.watch<LoginSignupData>().isSignup)
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: changeTapColor(text, watch.isSignup),
             ),
           ),
-          if (text=='LOG IN'? !context.watch<LoginSignupData>().isSignup : context.watch<LoginSignupData>().isSignup)
+          if (text == 'LOG IN' ? !watch.isSignup : watch.isSignup)
             Container(
               margin: const EdgeInsets.only(top: 3),
               height: 2,

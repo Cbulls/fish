@@ -25,54 +25,56 @@ class _TopAppBarState extends State<TopAppBar> {
     print(
         'appbar userName : ${context.watch<LoginSignupData>().authentication.currentUser}');
     return StreamBuilder<User?>(
-        stream:
-            context.watch<LoginSignupData>().authentication.authStateChanges(),
-        builder: (context, snapshot) {
-          return AppBar(
-            title: snapshot.hasData
-                ? Text(context
-                    .watch<LoginSignupData>()
-                    .authentication
-                    .currentUser!
-                    .displayName
-                    .toString())
-                : const Text('Instagram'),
-            actions: [
-              snapshot.hasData
-                  ? IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Profile(
-                                      profileImage: snapshot.data!.photoURL ??
-                                          'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jordan_Lipofsky.jpg/180px-Jordan_Lipofsky.jpg',
-                                      user:
-                                          snapshot.data!.displayName ?? '이름없음',
-                                    )));
-                      },
-                      icon: const Icon(Icons.star),
-                    )
-                  : IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const LoginSignup()));
-                      },
-                      icon: const Icon(Icons.account_circle),
-                    ),
-              IconButton(
-                  onPressed: () {
-                    context.read<ProfileData>().uploadImage(context, 'upload');
-                  },
-                  icon: const Icon(Icons.upload)),
-              IconButton(
-                icon: const Icon(Icons.settings),
-                onPressed: () {},
-              )
-            ],
-          );
-        });
+      stream:
+          context.watch<LoginSignupData>().authentication.authStateChanges(),
+      builder: (context, snapshot) {
+        return AppBar(
+          title: snapshot.hasData
+              ? Text(context
+                  .watch<LoginSignupData>()
+                  .authentication
+                  .currentUser!
+                  .displayName
+                  .toString())
+              : const Text('Instagram'),
+          actions: [
+            snapshot.hasData
+                ? IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Profile(
+                            profileImage: snapshot.data!.photoURL ??
+                                'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jordan_Lipofsky.jpg/180px-Jordan_Lipofsky.jpg',
+                            user: snapshot.data!.displayName ?? '이름없음',
+                          ),
+                        ),
+                      );
+                    },
+                    icon: const Icon(Icons.star),
+                  )
+                : IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginSignup()));
+                    },
+                    icon: const Icon(Icons.account_circle),
+                  ),
+            IconButton(
+                onPressed: () {
+                  context.read<ProfileData>().uploadImage(context, 'upload');
+                },
+                icon: const Icon(Icons.upload)),
+            IconButton(
+              icon: const Icon(Icons.settings),
+              onPressed: () {},
+            )
+          ],
+        );
+      },
+    );
   }
 }
