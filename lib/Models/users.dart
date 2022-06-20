@@ -16,7 +16,7 @@ class User {
   });
 
   // DocumentSnapshot : Firestore에서 실시간 데이터를 주고받을 때 사용하는 용도
-  User fromSnap(DocumentSnapshot snap) {
+  static User fromSnap(DocumentSnapshot snap) {
     var snapshot = snap.data() as Map<String, dynamic>;
 
     return User(
@@ -29,10 +29,10 @@ class User {
   }
 
   Map<String, dynamic> toJson() => {
-    "username": username,
-    "uid": uid,
-    "photoUrl": photoUrl,
-    "followers": followers,
-    "following": following,
-  };
+        "username": username,
+        "uid": uid,
+        "photoUrl": photoUrl,
+        "followers": followers,
+        "following": following,
+      };
 }

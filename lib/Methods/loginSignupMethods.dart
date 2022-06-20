@@ -18,6 +18,16 @@ class LoginSignupData extends ChangeNotifier {
   String userName = '';
   String userEmail = '';
   String userPassword = '';
+  var userData;
+
+  getUserInfo() async {
+    var currentUser = authentication.currentUser!;
+    var userSnapshot =
+        await firestore.collection('users').doc(currentUser.uid).get();
+    print('photoURL : ${model.User.fromSnap(userSnapshot).photoUrl}');
+    userData = model.User.fromSnap(userSnapshot);
+    notifyListeners();
+  }
 
   changeIsLoading(status) {
     isLoading = status;
@@ -48,6 +58,7 @@ class LoginSignupData extends ChangeNotifier {
           .showSnackBar(returnSnackBar(context, errorCode));
     }
     isLoading = false;
+    getUserInfo();
     notifyListeners();
   }
 
@@ -63,6 +74,7 @@ class LoginSignupData extends ChangeNotifier {
   }
 
   signUp(BuildContext context, image) async {
+    // final readUserData = context.read<UserData>();
     try {
       final navigator = Navigator.of(context);
       !isSignupValid ? isSignupValid = true : null;
@@ -86,7 +98,6 @@ class LoginSignupData extends ChangeNotifier {
             .collection("users")
             .doc(result.user!.uid)
             .set(user.toJson());
-        // res = "success";
       }
       await result.user!.updateDisplayName(userName);
       await result.user!.updatePhotoURL(photoUrl);
@@ -99,6 +110,7 @@ class LoginSignupData extends ChangeNotifier {
           .showSnackBar(returnSnackBar(context, errorCode));
     }
     isLoading = false;
+    getUserInfo();
     notifyListeners();
   }
 
