@@ -85,16 +85,10 @@ class _UploadState extends State<Upload> {
                     .authentication
                     .authStateChanges(),
                 builder: (context, snapshot) {
-                  print('snapshot hasData : ${snapshot.hasData}');
                   return IconButton(
                     onPressed: () {
                       print(
                           'userData : ${context.read<LoginSignupData>().userData}');
-                      // context.read<HomeData>().putData(
-                      //       context.read<ProfileData>().uploadedImage,
-                      //       textController.text,
-                      //       now,
-                      //     );
                       setState(() {
                         context.read<LoginSignupData>().isLoading = true;
                       });

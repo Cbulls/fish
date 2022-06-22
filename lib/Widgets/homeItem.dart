@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Methods/homeMethods.dart';
+import 'package:instagram/Widgets/Comment/commentMain.dart';
 import 'package:provider/provider.dart';
 import '../Pages/profilePage.dart';
 
@@ -31,6 +32,8 @@ class _HomeItemState extends State<HomeItem> {
   Widget build(BuildContext context) {
     if (context.watch<HomeData>().homeData.isNotEmpty) {
       return ListView.builder(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
           itemCount: context.watch<HomeData>().homeData.length,
           controller: scrollController,
           itemBuilder: (context, index) {
@@ -63,7 +66,9 @@ class _HomeItemState extends State<HomeItem> {
                                     ['username'])));
                   },
                 ),
-                Text(context.watch<HomeData>().homeData[index]['description'])
+                Text(context.watch<HomeData>().homeData[index]['description']),
+                CommentMain(
+                    postId: context.watch<HomeData>().homeData[index]['postId'])
               ],
             );
           });

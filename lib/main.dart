@@ -14,30 +14,31 @@ import 'firebase_options.dart';
 
 // 변수를 다른 파일에서 쓰기 싫을 때 : _변수 _함수명 _클래스명
 
-void main() async{
+void main() async {
   // 플러터에서 사용하는 플러그인을 초기화하는 메소드가 비동기 방식이면 문제가 난다. 왜냐면 runApp이 불러온 다음에야 접근을 할 수 있기 때문이다.
   // 따라서 플러터 코어 엔진을 초기화하기 위해서는 WidgetsFlutterBinding.ensureInitialized(); 코드를 실행해야한다
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(
-      MultiProvider(
-        providers: [
-          ChangeNotifierProvider<HomeData>(create: (context)=>HomeData()),
-          ChangeNotifierProvider<ProfileData>(create: (context)=>ProfileData()),
-          ChangeNotifierProvider<LoginSignupData>(create: (context)=>LoginSignupData()),
-        ],
-        child: MaterialApp(
-          theme: theme.style,
-          home: const MyApp(),
-          debugShowCheckedModeBanner: false,
-          navigatorKey: navigatorKey,
-        ),
-      )
-  );
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider<HomeData>(create: (context) => HomeData()),
+      ChangeNotifierProvider<ProfileData>(create: (context) => ProfileData()),
+      ChangeNotifierProvider<LoginSignupData>(
+          create: (context) => LoginSignupData()),
+    ],
+    child: MaterialApp(
+      theme: theme.style,
+      home: const MyApp(),
+      debugShowCheckedModeBanner: false,
+      navigatorKey: navigatorKey,
+    ),
+  ));
 }
+
 final navigatorKey = GlobalKey<NavigatorState>();
+
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -50,30 +51,31 @@ class _MyAppState extends State<MyApp> {
   final PageController _pageController = PageController(initialPage: 0);
   var scrollController = ScrollController();
 
-  void _changePage(int index){
-    setState(()=>{
-      _currentIndex = index
-    });
+  void _changePage(int index) {
+    setState(() => {_currentIndex = index});
   }
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    context.read<HomeData>().getData();
+    context.read<HomeData>().getPostData();
+    context.read<LoginSignupData>().getUserInfo();
     initNotification();
   }
+
   @override
   Widget build(BuildContext context) {
-    return  DefaultTabController(
+    return DefaultTabController(
       length: 4,
       child: Scaffold(
         appBar: TopAppBar(),
         body: BodyPage(
-          changePage : _changePage,
-          pageController : _pageController,
-          currentIndex : _currentIndex,
+          changePage: _changePage,
+          pageController: _pageController,
+          currentIndex: _currentIndex,
         ),
-        bottomNavigationBar: BottomBar(currentIndex: _currentIndex, pageController: _pageController),
+        bottomNavigationBar: BottomBar(
+            currentIndex: _currentIndex, pageController: _pageController),
         extendBodyBehindAppBar: true,
       ),
     );

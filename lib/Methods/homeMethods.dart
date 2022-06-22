@@ -22,16 +22,34 @@ class HomeData extends ChangeNotifier {
   DateTime get now => _now;
 
   // 처음 홈에서 렌더링 될 때 나오는 아이템 데이터를 불러옴
-  getData() async {
+  getPostData() async {
     try {
       // 만들어진지 가장 최근 순으로
       var fishResult = await firestore
           .collection('posts')
           .orderBy('createdAt', descending: true)
           .get();
-      for (var doc in fishResult.docs) {
-        homeData.add(doc.data());
+      // for (var doc in fishResult.docs) {
+      //   // print('doc : ${doc.data.postId}');
+      //   homeData.add(doc.data());
+      // }
+      for (var i = 0; i < fishResult.docs.length; i++) {
+        print('doc : ${fishResult.docs[i].data()['postId']}');
+        homeData.add(fishResult.docs[i].data());
+        getComments(fishResult.docs[i].data()['postId']);
       }
+    } catch (e) {
+      print(e);
+    }
+    print('homeData : $homeData');
+
+    notifyListeners();
+  }
+
+  getComments(postId) async {
+    try {
+      var comments = await firestore.collection('comments').doc(postId).get();
+      print('getcomments: ${comments.data()}');
     } catch (e) {
       print(e);
     }
@@ -53,7 +71,7 @@ class HomeData extends ChangeNotifier {
     boardItem['content'] = content;
     print('업로드 $boardItem');
     homeData.insert(0, boardItem);
-    getData();
+    getPostData();
 
     notifyListeners();
   }
@@ -74,6 +92,29 @@ class HomeData extends ChangeNotifier {
       );
       firestore.collection('posts').doc(postId).set(post.toJson());
       putData(uid, postId, username, 0, photoUrl, content, DateTime.now());
+    } catch (error) {
+      print('upload error: $error');
+    }
+    notifyListeners();
+  }
+
+  uploadComment(uid, postId, content, username, photoUrl) async {
+    print('comment username : $username');
+    try {
+      String commentId = const Uuid().v1();
+      await firestore
+          .collection('posts')
+          .doc(postId)
+          .collection('comments')
+          .doc(commentId)
+          .set({
+        'uid': uid,
+        'username': username,
+        'photoUrl': photoUrl,
+        'comment': content,
+        'commentId': commentId,
+        'createdAt': DateTime.now()
+      });
     } catch (error) {
       print('upload error: $error');
     }
