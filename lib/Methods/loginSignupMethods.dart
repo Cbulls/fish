@@ -6,7 +6,7 @@ import 'package:instagram/Methods/profileMethods.dart';
 import 'package:provider/provider.dart';
 import '../Constants/loginSignupConstants.dart';
 import './storageMethod.dart';
-import '../Models/users.dart' as model;
+import '../Models/users.dart';
 
 class LoginSignupData extends ChangeNotifier {
   final firestore = FirebaseFirestore.instance;
@@ -24,8 +24,8 @@ class LoginSignupData extends ChangeNotifier {
     var currentUser = authentication.currentUser!;
     var userSnapshot =
         await firestore.collection('users').doc(currentUser.uid).get();
-    print('photoURL : ${model.User.fromSnap(userSnapshot).photoUrl}');
-    userData = model.User.fromSnap(userSnapshot);
+    print('photoURL : ${ModelUser.fromSnap(userSnapshot).photoUrl}');
+    userData = ModelUser.fromSnap(userSnapshot);
     notifyListeners();
   }
 
@@ -86,7 +86,7 @@ class LoginSignupData extends ChangeNotifier {
       );
       String photoUrl = await uploadImageToStorage('profilePics', image, false);
       if (isSignupValid) {
-        model.User user = model.User(
+        ModelUser user = ModelUser(
           username: userName,
           uid: result.user!.uid,
           photoUrl: photoUrl,

@@ -1,13 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class User {
+class ModelUser {
   String uid;
   String photoUrl;
   String username;
   List followers;
   List following;
 
-  User({
+  ModelUser({
     required this.uid,
     required this.photoUrl,
     required this.username,
@@ -16,10 +16,10 @@ class User {
   });
 
   // DocumentSnapshot : Firestore에서 실시간 데이터를 주고받을 때 사용하는 용도
-  static User fromSnap(DocumentSnapshot snap) {
+  static ModelUser fromSnap(DocumentSnapshot snap) {
     var snapshot = snap.data() as Map<String, dynamic>;
 
-    return User(
+    return ModelUser(
       username: snapshot["username"],
       uid: snapshot["uid"],
       photoUrl: snapshot["photoUrl"],
