@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram/Methods/homeMethods.dart';
 import 'package:instagram/Widgets/Comment/commentMain.dart';
@@ -49,8 +50,51 @@ class _HomeItemState extends State<HomeItem> {
                         context.watch<HomeData>().homeData[index]['photoUrl'])
                     : Image.file(
                         context.watch<HomeData>().homeData[index]['photoUrl']),
-                Text(
-                    'Likes ${context.watch<HomeData>().homeData[index]['likes']}'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Flexible(
+                      child: TextButton.icon(
+                        onPressed: () {
+                          context.read<HomeData>().pressLike(
+                              context.read<HomeData>().homeData[index]
+                                  ['postId'],
+                              context.read<HomeData>().homeData[index]['uid'],
+                              context.read<HomeData>().homeData[index]
+                                  ['likes']);
+                        },
+                        label: Text(context
+                            .watch<HomeData>()
+                            .homeData[index]['likes']
+                            .length
+                            .toString()),
+                        icon: const Icon(Icons.favorite),
+                      ),
+                    ),
+                    TextButton.icon(
+                      onPressed: () {},
+                      label: StreamBuilder(
+                          stream: FirebaseFirestore.instance
+                              .collection('posts')
+                              .doc(context.watch<HomeData>().homeData[index]
+                                  ['postId'])
+                              .collection('comments')
+                              .orderBy('createdAt', descending: false)
+                              .snapshots(),
+                          builder: (context,
+                              AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>>
+                                  snapshot) {
+                            return snapshot.hasData
+                                ? Text(snapshot.data!.docs.length.toString())
+                                : const Text('0');
+                          }),
+                      icon: const Icon(
+                        Icons.chat,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
                 GestureDetector(
                   child: Text(
                       context.watch<HomeData>().homeData[index]['username']),

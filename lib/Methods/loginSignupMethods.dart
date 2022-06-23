@@ -114,7 +114,7 @@ class LoginSignupData extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<UserCredential> signInWithGoogle() async {
+  Future<UserCredential> signInWithGoogle(context) async {
     // Trigger the authentication flow
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
@@ -128,6 +128,7 @@ class LoginSignupData extends ChangeNotifier {
       idToken: googleAuth?.idToken,
     );
 
+    Navigator.pop(context);
     // Once signed in, return the UserCredential
     return await FirebaseAuth.instance.signInWithCredential(credential);
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Methods/loginSignupMethods.dart';
+import 'package:instagram/Widgets/LoginSignup/googleLoginSignupButton.dart';
 import 'package:instagram/Widgets/LoginSignup/loginSignupSendingButton.dart';
 import 'package:instagram/Widgets/LoginSignup/loginSignupBackground.dart';
 import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/loginSignupTextfield.dart';
@@ -55,6 +56,7 @@ class LoginSignup extends StatelessWidget {
                       ),
                     )
                   : const LoginSignupSendingButton(),
+              //구글 로그인 버튼
               AnimatedPositioned(
                 duration: const Duration(milliseconds: 500),
                 curve: Curves.easeIn,
@@ -71,21 +73,10 @@ class LoginSignup extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    TextButton.icon(
-                      onPressed: () {},
-                      style: TextButton.styleFrom(
-                          primary: Colors.white,
-                          minimumSize: const Size(155, 40),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                          backgroundColor: Colors.black),
-                      icon: const Icon(Icons.add),
-                      label: const Text('Google'),
-                    ),
+                    const GoogleLoginSignupButton()
                   ],
                 ),
               ),
-              //구글 로그인 버튼
             ],
           ),
         ));
