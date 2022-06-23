@@ -1,8 +1,6 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:http/http.dart' as http;
 import 'package:instagram/Methods/storageMethod.dart';
-import 'dart:convert';
 import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:uuid/uuid.dart';
@@ -13,6 +11,7 @@ class HomeData extends ChangeNotifier {
   var boardItem = {};
   final firestore = FirebaseFirestore.instance;
   final storage = FirebaseStorage.instance;
+  int itemCount = 2;
 
   late String _image;
   String get image => _image;
@@ -29,14 +28,10 @@ class HomeData extends ChangeNotifier {
           .collection('posts')
           .orderBy('createdAt', descending: true)
           .get();
-      // for (var doc in fishResult.docs) {
-      //   // print('doc : ${doc.data.postId}');
-      //   homeData.add(doc.data());
-      // }
-      for (var i = 0; i < fishResult.docs.length; i++) {
+      for (var i = 0; i < 2; i++) {
         print('doc : ${fishResult.docs[i].data()['postId']}');
         homeData.add(fishResult.docs[i].data());
-        getComments(fishResult.docs[i].data()['postId']);
+        //getComments(fishResult.docs[i].data()['postId']);
       }
     } catch (e) {
       print(e);
@@ -46,17 +41,18 @@ class HomeData extends ChangeNotifier {
     notifyListeners();
   }
 
-  getComments(postId) async {
-    try {
-      var comments = await firestore.collection('comments').doc(postId).get();
-      print('getcomments: ${comments.data()}');
-    } catch (e) {
-      print(e);
-    }
-    print('homeData : $homeData');
-
-    notifyListeners();
-  }
+  // getComments(postId) async {
+  //   try {
+  //     var comments = await firestore.collection('comments').doc(postId).get();
+  //     print('getcomments: ${comments.data()}');
+  //     return comments.data()?.length;
+  //   } catch (e) {
+  //     print(e);
+  //   }
+  //   print('homeData : $homeData');
+  //
+  //   notifyListeners();
+  // }
 
   // Upload 페이지에서 사진과 글을 생성할 때 사용됨
   putData(uid, postId, username, likes, image, content, now) {
@@ -66,7 +62,6 @@ class HomeData extends ChangeNotifier {
     boardItem['user'] = username;
     boardItem['liked'] = false;
     boardItem['date'] = DateFormat('MMM dd').format(now);
-    // 여기를 또 바꿔야 함
     boardItem['image'] = image;
     boardItem['content'] = content;
     print('업로드 $boardItem');
@@ -123,18 +118,37 @@ class HomeData extends ChangeNotifier {
 
   // 무한스크롤처럼 자동으로 api를 호출해서 자동으로 데이터를 가져온다.
   getMoreData() async {
-    var rawData = await http
-        .get(Uri.parse('https://codingapple1.github.io/app/more2.json'));
-    var moreData = await jsonDecode(rawData.body);
-    print('moreData : $moreData');
-    addData(moreData);
-
+    try {
+      var fishResult = await firestore
+          .collection('posts')
+          .orderBy('createdAt', descending: true)
+          .get();
+      for (var i = itemCount; i < itemCount + 2; i++) {
+        print('doc : ${fishResult.docs[i].data()['postId']}');
+        homeData.add(fishResult.docs[i].data());
+        //getComments(fishResult.docs[i].data()['postId']);
+      }
+    } catch (e) {
+      print(e);
+    }
     notifyListeners();
   }
 
-  addData(data) {
-    print('추가 데이터 $data');
-    homeData.add(data);
-    notifyListeners();
+  pressLike(String postId, String uid, likes) async {
+    try {
+      if (likes.contains(uid)) {
+        // if the likes list contains the user uid, we need to remove it
+        await firestore.collection('posts').doc(postId).update({
+          'likes': FieldValue.arrayRemove([uid])
+        });
+      } else {
+        // else we need to add uid to the likes array
+        await firestore.collection('posts').doc(postId).update({
+          'likes': FieldValue.arrayUnion([uid])
+        });
+      }
+    } catch (error) {
+      print('likes error : $error');
+    }
   }
 }

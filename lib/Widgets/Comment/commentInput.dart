@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Methods/homeMethods.dart';
 import 'package:provider/provider.dart';
-
 import '../../Methods/loginSignupMethods.dart';
 
 class CommentInput extends StatefulWidget {
-  const CommentInput({Key? key, required this.snapshot, required this.postId})
-      : super(key: key);
+  const CommentInput({Key? key, required this.postId}) : super(key: key);
 
-  final snapshot;
   final postId;
   @override
   State<CommentInput> createState() => _CommentInputState();
@@ -55,7 +52,6 @@ class _CommentInputState extends State<CommentInput> {
                 child: const Text('Post', style: TextStyle(color: Colors.blue)),
               ),
               onTap: () {
-                print('widget : ${widget.snapshot.data}');
                 final isValid = _formKey.currentState!
                     .validate(); // Null check operator used on a null value
                 if (isValid) {
@@ -63,16 +59,14 @@ class _CommentInputState extends State<CommentInput> {
                   print(
                       'userData : ${context.read<LoginSignupData>().userData}');
                   context.read<HomeData>().uploadComment(
-                      // widget.snapshot.uid,
-                      // widget.postId,
-                      // _commentController.text,
-                      // widget.snapshot.username,
-                      // widget.snapshot.photoUrl
                       context.read<LoginSignupData>().userData.uid,
                       widget.postId,
                       _commentController.text,
                       context.read<LoginSignupData>().userData.username,
                       context.read<LoginSignupData>().userData.photoUrl);
+                  setState(() {
+                    _commentController.text = "";
+                  });
                 }
               },
             )

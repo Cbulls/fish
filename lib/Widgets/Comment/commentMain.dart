@@ -7,7 +7,7 @@ import './commentInput.dart';
 import 'commentItem.dart';
 
 class CommentMain extends StatelessWidget {
-  CommentMain({Key? key, required this.postId}) : super(key: key);
+  const CommentMain({Key? key, required this.postId}) : super(key: key);
 
   final postId;
   @override
@@ -19,15 +19,18 @@ class CommentMain extends StatelessWidget {
           print('snapshot : ${snapshot.data}');
           return Column(
             children: [
-              snapshot.hasData ? commentsList(postId) : const SizedBox(),
-              const Divider(
-                height: 15.0,
-                color: Colors.grey,
-              ),
-              CommentInput(
-                snapshot: snapshot,
-                postId: postId,
-              )
+              commentsList(postId),
+              snapshot.hasData
+                  ? Column(children: [
+                      const Divider(
+                        height: 15.0,
+                        color: Colors.grey,
+                      ),
+                      CommentInput(
+                        postId: postId,
+                      )
+                    ])
+                  : const SizedBox()
             ],
           );
         });
@@ -39,6 +42,7 @@ class CommentMain extends StatelessWidget {
             .collection('posts')
             .doc(postId)
             .collection('comments')
+            .orderBy('createdAt', descending: false)
             .snapshots(),
         builder: (context,
             AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
@@ -48,8 +52,9 @@ class CommentMain extends StatelessWidget {
             );
           }
           return ListView.builder(
-            scrollDirection: Axis.vertical,
             shrinkWrap: true,
+            // 댓글 창은 이중 스크롤 방지
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: snapshot.data!.docs.length,
             itemBuilder: ((context, index) =>
                 CommentItem(snapshot: snapshot.data!.docs[index])),
