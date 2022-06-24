@@ -134,7 +134,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		zIFLjjwNEqgdvbO4u+YCpOKUoh4=
+		cpNvuyxBWgF8eo9f5AIEivicS8E=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -142,11 +142,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		nSxLxouBO+PXvuGTroNZKrTR/18=
+		Y6wRmyooGZbuLaif2mClWwcL3Yg=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		GNmrYdJj2Mi/v197MetSZYEF3v0=
+		kF6r2MH/GRnq3DGaTTyW/s4yKf4=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -155,6 +155,10 @@
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
 		pWWJKFeyRywYe44273E+uEc/K2o=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/bass.png</key>
+		<data>
+		B3JcMclDgrqUrbquswAl70y6zLM=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/coffee1.jpg</key>
 		<data>
@@ -184,6 +188,10 @@
 		<data>
 		SmFLwuj7ChF3x/sR5ExjgmPiPY4=
 		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/google-login.jpg</key>
+		<data>
+		W550NfzZU9nL5RLXkyR0Kws5wv8=
+		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/lonelyBoat.jpg</key>
 		<data>
 		PlaC50ygVu/dpVCph6NVbaO4NhM=
@@ -206,7 +214,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		9P0qDLTO4/Xva6ZZnvbbJW2mwEs=
+		DwONK+BPoeAt2w0yT06UQ5eUe6Y=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -1249,7 +1257,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nZy+QTU4U4gXzfuN3EpE+ldiG+UbXp14wE/z4hHOogA=
+			l2AZKTIoJu73SAjH3ArWzpY8dmThCdGH32z64wkROE8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -1263,14 +1271,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uJNyM1stk0BQtYTsZ2UjlCMtX9R4OWegTQ/9kwiYbSU=
+			kSzuTXGn1gNMPdZASLuNaEq8KDlOcACRRzBWOM56RhA=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ym9HIS1/8Wam284FMjntn+CnbLsSR8JdavRtwPBgQWQ=
+			wa4gOfPyeoIH80EI6WJ+rGAd4CzG42JmInY0r6Lltcs=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -1285,6 +1293,13 @@
 			<key>hash2</key>
 			<data>
 			ec263tTpcKtpb8Y/csSCgEQltr7GVbmD2GHnfl7u2G8=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/bass.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Scq1VSKc4c1PMFUtEMnDAGDR2nyHqt4b6+ziebOmF30=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/coffee1.jpg</key>
@@ -1336,6 +1351,13 @@
 			qc5aF3UJxluyhCueG/7W6O4HeuFreEuhxWGW7PR2Ils=
 			</data>
 		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/google-login.jpg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kTwTWo989bSRpqk8hvp206O8PxrMTqFgvS3SIbA+KLg=
+			</data>
+		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/lonelyBoat.jpg</key>
 		<dict>
 			<key>hash2</key>
@@ -1375,7 +1397,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4DL4yM+9pC2nOtd6Mrb9TTMyfdtz0xm4bhYgJgihcoE=
+			6MRel3zxu1VA9o7YeO/bVfI/hY2UED4yWRf6GDnKDho=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

@@ -66,6 +66,7 @@ class LoginSignupData extends ChangeNotifier {
     try {
       await authentication.signOut();
       isSignup = false;
+      userData = null;
     } on FirebaseAuthException catch (errorCode) {
       print('SignOut FirebaseAuthException : $errorCode');
     }
