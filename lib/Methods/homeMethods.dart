@@ -123,11 +123,12 @@ class HomeData extends ChangeNotifier {
           .collection('posts')
           .orderBy('createdAt', descending: true)
           .get();
-      for (var i = itemCount; i < itemCount + 2; i++) {
+      for (var i = itemCount; i < itemCount + 1; i++) {
         print('doc : ${fishResult.docs[i].data()['postId']}');
         homeData.add(fishResult.docs[i].data());
         //getComments(fishResult.docs[i].data()['postId']);
       }
+      itemCount = itemCount + 1;
     } catch (e) {
       print(e);
     }
@@ -150,5 +151,6 @@ class HomeData extends ChangeNotifier {
     } catch (error) {
       print('likes error : $error');
     }
+    notifyListeners();
   }
 }

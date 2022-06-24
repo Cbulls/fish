@@ -22,7 +22,7 @@ class _HomeItemState extends State<HomeItem> {
     scrollController.addListener(() {
       if (scrollController.position.pixels ==
               scrollController.position.maxScrollExtent &&
-          countAPI < 1) {
+          countAPI < context.read<HomeData>().homeData.length) {
         context.read<HomeData>().getMoreData();
         countAPI++;
       }
@@ -54,22 +54,35 @@ class _HomeItemState extends State<HomeItem> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Flexible(
-                      child: TextButton.icon(
-                        onPressed: () {
-                          context.read<HomeData>().pressLike(
-                              context.read<HomeData>().homeData[index]
-                                  ['postId'],
-                              context.read<HomeData>().homeData[index]['uid'],
-                              context.read<HomeData>().homeData[index]
-                                  ['likes']);
-                        },
-                        label: Text(context
-                            .watch<HomeData>()
-                            .homeData[index]['likes']
-                            .length
-                            .toString()),
-                        icon: const Icon(Icons.favorite),
-                      ),
+                      child: StreamBuilder(
+                          stream: FirebaseFirestore.instance
+                              .collection('posts')
+                              .snapshots(),
+                          builder: (context,
+                              AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>>
+                                  snapshot) {
+                            if (snapshot.hasData) {
+                              final snap = snapshot.data!.docs[index].data();
+                              return TextButton.icon(
+                                onPressed: () {
+                                  context.read<HomeData>().pressLike(
+                                      snap['postId'],
+                                      snap['uid'],
+                                      snap['likes']);
+                                },
+                                label: Text(snap["likes"].length.toString()),
+                                icon: snap["likes"]
+                                        .contains(snap['uid'] ?? '유저없음')
+                                    ? const Icon(
+                                        Icons.favorite,
+                                        color: Colors.red,
+                                      )
+                                    : const Icon(Icons.favorite_border,
+                                        color: Colors.grey),
+                              );
+                            }
+                            return const SizedBox();
+                          }),
                     ),
                     TextButton.icon(
                       onPressed: () {},
