@@ -6,7 +6,6 @@ class CommentItem extends StatelessWidget {
   final snapshot;
   @override
   Widget build(BuildContext context) {
-    // final snapshot = context.read<LoginSignupData>().userData;
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Row(
@@ -23,9 +22,7 @@ class CommentItem extends StatelessWidget {
           ),
           Row(
             children: [
-              Text(
-                  //snapshot.data['username']
-                  snapshot['username'],
+              Text(snapshot['username'],
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                   )),

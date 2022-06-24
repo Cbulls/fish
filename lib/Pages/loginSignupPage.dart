@@ -57,26 +57,7 @@ class LoginSignup extends StatelessWidget {
                     )
                   : const LoginSignupSendingButton(),
               //구글 로그인 버튼
-              AnimatedPositioned(
-                duration: const Duration(milliseconds: 500),
-                curve: Curves.easeIn,
-                top: context.watch<LoginSignupData>().isSignup
-                    ? MediaQuery.of(context).size.height - 125
-                    : MediaQuery.of(context).size.height - 165,
-                right: 0,
-                left: 0,
-                child: Column(
-                  children: [
-                    Text(context.watch<LoginSignupData>().isSignup
-                        ? 'or Signup with'
-                        : 'or Signin with'),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const GoogleLoginSignupButton()
-                  ],
-                ),
-              ),
+              const GoogleLoginSignupButton(),
             ],
           ),
         ));
