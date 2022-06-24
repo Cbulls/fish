@@ -32,7 +32,7 @@ class GoogleLoginSignupButton extends StatelessWidget {
                 minimumSize: const Size(155, 40),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
-                backgroundColor: Color.fromRGBO(207, 70, 51, 1)),
+                backgroundColor: const Color.fromRGBO(207, 70, 51, 1)),
             icon: const Icon(Icons.add),
             label: const Text('Google'),
           ),

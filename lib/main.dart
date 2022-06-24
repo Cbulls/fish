@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram/Methods/homeMethods.dart';
 import 'package:instagram/Methods/profileMethods.dart';
 import 'package:instagram/Methods/loginSignupMethods.dart';
+import 'package:instagram/Widgets/sidebar.dart';
 import 'package:instagram/widgets/bottomBar.dart';
 // 그냥 style 변수는 다른 style 변수가 생겨 겹칠 수도 있어서 as theme을 만든다
 import 'Widgets/notification.dart';
@@ -77,6 +78,7 @@ class _MyAppState extends State<MyApp> {
         bottomNavigationBar: BottomBar(
             currentIndex: _currentIndex, pageController: _pageController),
         extendBodyBehindAppBar: true,
+        endDrawer: const Sidebar(),
       ),
     );
   }

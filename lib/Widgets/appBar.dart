@@ -70,7 +70,9 @@ class _TopAppBarState extends State<TopAppBar> {
                 icon: const Icon(Icons.upload)),
             IconButton(
               icon: const Icon(Icons.settings),
-              onPressed: () {},
+              onPressed: () {
+                Scaffold.of(context).openEndDrawer();
+              },
             )
           ],
         );

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../Methods/loginSignupMethods.dart';
 import '../Methods/profileMethods.dart';
 
 class Profile extends StatefulWidget {
@@ -58,10 +57,6 @@ class _ProfileState extends State<Profile> {
                           : Colors.grey,
                       onPressed: () {
                         context.read<ProfileData>().follow();
-                        context.read<LoginSignupData>().signOut();
-                        setState(() {
-                          context.read<LoginSignupData>().userData = null;
-                        });
                       },
                       icon: const Icon(Icons.favorite))
                 ],
