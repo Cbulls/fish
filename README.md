@@ -1,4 +1,4 @@
-# instagram
+# Fish App
 
 A new Flutter project.
 
