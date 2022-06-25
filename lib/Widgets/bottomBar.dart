@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../Methods/pageMethods.dart';
 
 final _bottomBarList = [
   const BottomNavigationBarItem(
@@ -19,26 +21,17 @@ final _bottomBarList = [
   ),
 ];
 
-
 class BottomBar extends StatelessWidget {
-  const BottomBar({Key? key,
-    this.currentIndex,
-    this.pageController}) : super(key: key);
-  final currentIndex;
-  final pageController;
+  const BottomBar({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      currentIndex: currentIndex,
+      currentIndex: context.watch<PageData>().currentIndex,
       items: _bottomBarList,
-      onTap: (index){
-        pageController.animateToPage(
-          index,
-          duration: const Duration(milliseconds: 500),
-          curve: Curves.ease
-        );
+      onTap: (index) {
+        context.read<PageData>().pageController.animateToPage(index,
+            duration: const Duration(milliseconds: 500), curve: Curves.ease);
       },
     );
   }
 }
-
