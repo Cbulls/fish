@@ -1,27 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/Methods/pageMethods.dart';
+import 'package:instagram/Widgets/practice.dart';
+import 'package:provider/provider.dart';
 import '../widgets/homeItem.dart';
 
 class BodyPage extends StatelessWidget {
-  const BodyPage({Key? key,
-    this.changePage,
-    this.currentIndex,
-    this.pageController,
-  }) : super(key: key);
-
-  final pageController;
-  final changePage;
-  final currentIndex;
-
+  const BodyPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PageView(
-      controller: pageController,
+      controller: context.read<PageData>().pageController,
       children: const [
         HomeItem(),
-        Center(
-          child: Text('2'),
-        ),
+        Practice(),
         Center(
           child: Text('3'),
         ),
@@ -29,8 +21,8 @@ class BodyPage extends StatelessWidget {
           child: Text('4'),
         ),
       ],
-      onPageChanged: (int index){
-        changePage(index);
+      onPageChanged: (int index) {
+        context.read<PageData>().changePage(index);
       },
     );
   }

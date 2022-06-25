@@ -15,6 +15,7 @@ class HomeItem extends StatefulWidget {
 class _HomeItemState extends State<HomeItem> {
   var scrollController = ScrollController();
   int countAPI = 0;
+  bool isChatOpen = true;
 
   @override
   void initState() {
@@ -41,6 +42,22 @@ class _HomeItemState extends State<HomeItem> {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                GestureDetector(
+                  child: Text(
+                      context.watch<HomeData>().homeData[index]['username'],
+                      style: Theme.of(context).textTheme.titleLarge),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Profile(
+                                profileImage: context
+                                    .watch<HomeData>()
+                                    .homeData[index]['photoUrl'],
+                                user: context.watch<HomeData>().homeData[index]
+                                    ['username'])));
+                  },
+                ),
                 context
                             .watch<HomeData>()
                             .homeData[index]['photoUrl']
@@ -70,7 +87,10 @@ class _HomeItemState extends State<HomeItem> {
                                       snap['uid'],
                                       snap['likes']);
                                 },
-                                label: Text(snap["likes"].length.toString()),
+                                label: Text(
+                                  snap["likes"].length.toString(),
+                                  style: const TextStyle(color: Colors.black),
+                                ),
                                 icon: snap["likes"]
                                         .contains(snap['uid'] ?? '유저없음')
                                     ? const Icon(
@@ -85,47 +105,49 @@ class _HomeItemState extends State<HomeItem> {
                           }),
                     ),
                     TextButton.icon(
-                      onPressed: () {},
-                      label: StreamBuilder(
-                          stream: FirebaseFirestore.instance
-                              .collection('posts')
-                              .doc(context.watch<HomeData>().homeData[index]
-                                  ['postId'])
-                              .collection('comments')
-                              .orderBy('createdAt', descending: false)
-                              .snapshots(),
-                          builder: (context,
-                              AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>>
-                                  snapshot) {
-                            return snapshot.hasData
-                                ? Text(snapshot.data!.docs.length.toString())
-                                : const Text('0');
-                          }),
-                      icon: const Icon(
-                        Icons.chat,
-                        color: Colors.black,
-                      ),
-                    ),
+                        onPressed: () {
+                          setState(() {
+                            isChatOpen = !isChatOpen;
+                            print('isChatOpen : $isChatOpen');
+                          });
+                        },
+                        label: StreamBuilder(
+                            stream: FirebaseFirestore.instance
+                                .collection('posts')
+                                .doc(context.watch<HomeData>().homeData[index]
+                                    ['postId'])
+                                .collection('comments')
+                                .orderBy('createdAt', descending: false)
+                                .snapshots(),
+                            builder: (context,
+                                AsyncSnapshot<
+                                        QuerySnapshot<Map<String, dynamic>>>
+                                    snapshot) {
+                              return snapshot.hasData
+                                  ? Text(
+                                      snapshot.data!.docs.length.toString(),
+                                      style:
+                                          const TextStyle(color: Colors.black),
+                                    )
+                                  : const Text('0');
+                            }),
+                        icon: isChatOpen
+                            ? const Icon(
+                                Icons.chat,
+                                color: Colors.green,
+                              )
+                            : const Icon(
+                                Icons.chat_outlined,
+                                color: Colors.grey,
+                              )),
                   ],
                 ),
-                GestureDetector(
-                  child: Text(
-                      context.watch<HomeData>().homeData[index]['username']),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Profile(
-                                profileImage: context
-                                    .watch<HomeData>()
-                                    .homeData[index]['photoUrl'],
-                                user: context.watch<HomeData>().homeData[index]
-                                    ['username'])));
-                  },
-                ),
                 Text(context.watch<HomeData>().homeData[index]['description']),
-                CommentMain(
-                    postId: context.watch<HomeData>().homeData[index]['postId'])
+                isChatOpen
+                    ? CommentMain(
+                        postId: context.watch<HomeData>().homeData[index]
+                            ['postId'])
+                    : const SizedBox()
               ],
             );
           });

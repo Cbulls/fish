@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Methods/homeMethods.dart';
+import 'package:instagram/Methods/pageMethods.dart';
 import 'package:instagram/Methods/profileMethods.dart';
 import 'package:instagram/Methods/loginSignupMethods.dart';
 import 'package:instagram/Widgets/sidebar.dart';
@@ -8,7 +9,6 @@ import 'package:instagram/widgets/bottomBar.dart';
 import 'Widgets/notification.dart';
 import 'constants/theme.dart' as theme;
 import './Pages/bodyPage.dart';
-import 'widgets/appBar.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -28,6 +28,7 @@ void main() async {
       ChangeNotifierProvider<ProfileData>(create: (context) => ProfileData()),
       ChangeNotifierProvider<LoginSignupData>(
           create: (context) => LoginSignupData()),
+      ChangeNotifierProvider<PageData>(create: (context) => PageData())
     ],
     child: MaterialApp(
       theme: theme.style,
@@ -48,14 +49,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int _currentIndex = 0;
-  final PageController _pageController = PageController(initialPage: 0);
-  var scrollController = ScrollController();
-
-  void _changePage(int index) {
-    setState(() => {_currentIndex = index});
-  }
-
   @override
   void initState() {
     super.initState();
@@ -69,14 +62,9 @@ class _MyAppState extends State<MyApp> {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
-        appBar: TopAppBar(),
-        body: BodyPage(
-          changePage: _changePage,
-          pageController: _pageController,
-          currentIndex: _currentIndex,
-        ),
-        bottomNavigationBar: BottomBar(
-            currentIndex: _currentIndex, pageController: _pageController),
+        appBar: context.watch<PageData>().returnAppBar(),
+        body: const BodyPage(),
+        bottomNavigationBar: const BottomBar(),
         extendBodyBehindAppBar: true,
         endDrawer: const Sidebar(),
       ),
