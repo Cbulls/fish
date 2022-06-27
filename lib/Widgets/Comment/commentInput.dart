@@ -52,18 +52,30 @@ class _CommentInputState extends State<CommentInput> {
                 child: const Text('Post', style: TextStyle(color: Colors.blue)),
               ),
               onTap: () {
-                final isValid = _formKey.currentState!
-                    .validate(); // Null check operator used on a null value
+                final isValid = _formKey.currentState!.validate();
                 if (isValid) {
                   _formKey.currentState!.save();
                   print(
-                      'userData : ${context.read<LoginSignupData>().userData}');
+                      'userData : ${context.read<LoginSignupData>().authentication.currentUser?.uid}');
                   context.read<HomeData>().uploadComment(
-                      context.read<LoginSignupData>().userData.uid,
-                      widget.postId,
-                      _commentController.text,
-                      context.read<LoginSignupData>().userData.username,
-                      context.read<LoginSignupData>().userData.photoUrl);
+                        context
+                            .read<LoginSignupData>()
+                            .authentication
+                            .currentUser
+                            ?.uid,
+                        widget.postId,
+                        _commentController.text,
+                        context
+                            .read<LoginSignupData>()
+                            .authentication
+                            .currentUser
+                            ?.displayName,
+                        context
+                            .read<LoginSignupData>()
+                            .authentication
+                            .currentUser
+                            ?.photoURL,
+                      );
                   setState(() {
                     _commentController.text = "";
                   });

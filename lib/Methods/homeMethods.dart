@@ -80,13 +80,14 @@ class HomeData extends ChangeNotifier {
         createdAt: DateTime.now(),
         description: description,
         uid: uid,
-        likes: 0,
+        likes: [],
         postId: postId,
         photoUrl: photoUrl,
         username: username,
       );
       firestore.collection('posts').doc(postId).set(post.toJson());
-      putData(uid, postId, username, 0, photoUrl, content, DateTime.now());
+      //putData(uid, postId, username, 0, photoUrl, content, DateTime.now());
+      getPostData();
     } catch (error) {
       print('upload error: $error');
     }
