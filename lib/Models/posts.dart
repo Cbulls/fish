@@ -6,7 +6,7 @@ class Post {
   String photoUrl;
   String description;
   String username;
-  int likes;
+  List likes;
   DateTime createdAt;
 
   Post({
