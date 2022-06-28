@@ -4,6 +4,7 @@ class Post {
   String uid;
   String postId;
   String photoUrl;
+  String profilePic;
   String description;
   String username;
   List likes;
@@ -13,6 +14,7 @@ class Post {
     required this.uid,
     required this.postId,
     required this.photoUrl,
+    required this.profilePic,
     required this.description,
     required this.username,
     required this.likes,
@@ -29,18 +31,20 @@ class Post {
       uid: snapshot["uid"],
       description: snapshot["description"],
       photoUrl: snapshot["photoUrl"],
+      profilePic: snapshot["profilePic"],
       likes: snapshot["likes"],
       createdAt: snapshot["createdAt"],
     );
   }
 
   Map<String, dynamic> toJson() => {
-        "username": username,
-        "postId": postId,
-        "uid": uid,
-        "description": description,
-        "photoUrl": photoUrl,
-        "likes": likes,
-        "createdAt": createdAt,
-      };
+      "username": username,
+      "postId": postId,
+      "uid": uid,
+      "description": description,
+      "photoUrl": photoUrl,
+      "profilePic": profilePic,
+      "likes": likes,
+      "createdAt": createdAt,
+    };
 }

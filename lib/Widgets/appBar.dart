@@ -1,12 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-// import 'package:instagram/Pages/login.dart';
 import 'package:instagram/Methods/profileMethods.dart';
 // import 'package:instagram/Widgets/notification.dart';
 import 'package:provider/provider.dart';
-import '../Pages/profilePage.dart';
-import '../Pages/loginSignupPage.dart';
-import '../Methods/loginSignupMethods.dart';
+import 'package:instagram/Pages/profilePage.dart';
+import 'package:instagram/Pages/loginSignupPage.dart';
+import 'package:instagram/Methods/loginSignupMethods.dart';
 
 class TopAppBar extends StatefulWidget with PreferredSizeWidget {
   TopAppBar({Key? key}) : super(key: key);

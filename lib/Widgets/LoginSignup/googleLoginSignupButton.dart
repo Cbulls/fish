@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../Methods/loginSignupMethods.dart';
+import 'package:instagram/Methods/loginSignupMethods.dart';
 
 class GoogleLoginSignupButton extends StatelessWidget {
   const GoogleLoginSignupButton({Key? key}) : super(key: key);

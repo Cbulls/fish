@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Widgets/appBar.dart';
-import '../Widgets/searchbar.dart';
+import 'package:instagram/Widgets/appBar.dart';
+import 'package:instagram/Widgets/searchbar.dart';
 
 class PageData extends ChangeNotifier {
   int currentIndex = 0;

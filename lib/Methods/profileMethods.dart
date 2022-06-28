@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import '../Pages/uploadPage.dart';
+import 'package:instagram/Pages/uploadPage.dart';
 
 class ProfileData extends ChangeNotifier {
   var imageListInProfile = [];

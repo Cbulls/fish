@@ -6,12 +6,12 @@ import 'package:instagram/Methods/loginSignupMethods.dart';
 import 'package:instagram/Widgets/sidebar.dart';
 import 'package:instagram/widgets/bottomBar.dart';
 // 그냥 style 변수는 다른 style 변수가 생겨 겹칠 수도 있어서 as theme을 만든다
-import 'Widgets/notification.dart';
-import 'constants/theme.dart' as theme;
-import './Pages/bodyPage.dart';
+import 'package:instagram/Widgets/notification.dart';
+import 'package:instagram/constants/theme.dart' as theme;
+import 'package:instagram/Pages/bodyPage.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+import 'package:instagram/firebase_options.dart';
 
 // 변수를 다른 파일에서 쓰기 싫을 때 : _변수 _함수명 _클래스명
 

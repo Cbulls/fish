@@ -17,9 +17,9 @@ class UsedItemCard extends StatelessWidget {
             ),
           ),
         ),
-        Text('강아지'),
-        Text('17만원'),
-        Text('30')
+        const Text('강아지'),
+        const Text('17만원'),
+        const Text('30')
       ],
     );
   }

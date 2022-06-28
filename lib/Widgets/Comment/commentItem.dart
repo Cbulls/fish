@@ -22,10 +22,7 @@ class CommentItem extends StatelessWidget {
           ),
           Row(
             children: [
-              Text(snapshot['username'],
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                  )),
+              Text(snapshot['username']),
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Text(snapshot['comment']),

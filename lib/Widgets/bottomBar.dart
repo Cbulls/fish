@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../Methods/pageMethods.dart';
+import 'package:instagram/Methods/pageMethods.dart';
 
 final _bottomBarList = [
   const BottomNavigationBarItem(

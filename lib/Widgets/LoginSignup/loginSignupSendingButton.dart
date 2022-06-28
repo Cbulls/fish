@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Methods/profileMethods.dart';
 import 'package:provider/provider.dart';
-import '../../Methods/loginSignupMethods.dart';
-// 버튼 효과 : https://medium.flutterdevs.com/bouncing-button-animation-in-flutter-d0296442f3c5
+import 'package:instagram/Methods/loginSignupMethods.dart';
+//Todo 버튼 효과 : https://medium.flutterdevs.com/bouncing-button-animation-in-flutter-d0296442f3c5
 
 class LoginSignupSendingButton extends StatelessWidget {
   const LoginSignupSendingButton({Key? key}) : super(key: key);

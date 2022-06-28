@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Methods/loginSignupMethods.dart';
 import 'package:provider/provider.dart';
-
-import '../Pages/loginSignupPage.dart';
+import 'package:instagram/Pages/loginSignupPage.dart';
 
 class Sidebar extends StatelessWidget {
   const Sidebar({Key? key}) : super(key: key);
