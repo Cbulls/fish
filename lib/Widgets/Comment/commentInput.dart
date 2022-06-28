@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Methods/homeMethods.dart';
 import 'package:provider/provider.dart';
-import '../../Methods/loginSignupMethods.dart';
+import 'package:instagram/Methods/loginSignupMethods.dart';
 
 class CommentInput extends StatefulWidget {
   const CommentInput({Key? key, required this.postId}) : super(key: key);

@@ -4,9 +4,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:instagram/Methods/profileMethods.dart';
 import 'package:provider/provider.dart';
-import '../Constants/loginSignupConstants.dart';
-import './storageMethod.dart';
-import '../Models/users.dart';
+import 'package:instagram/Constants/loginSignupConstants.dart';
+import 'package:instagram/Methods/storageMethod.dart';
+import 'package:instagram/Models/users.dart';
 
 class LoginSignupData extends ChangeNotifier {
   final firestore = FirebaseFirestore.instance;

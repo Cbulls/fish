@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../Methods/loginSignupMethods.dart';
-import '../../../Constants/loginSignupConstants.dart';
+import 'package:instagram/Methods/loginSignupMethods.dart';
+import 'package:instagram/Constants/loginSignupConstants.dart';
 
 class LoginSignupTextFormField extends StatelessWidget {
   const LoginSignupTextFormField({Key? key,

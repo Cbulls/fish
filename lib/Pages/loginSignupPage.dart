@@ -5,7 +5,7 @@ import 'package:instagram/Widgets/LoginSignup/loginSignupSendingButton.dart';
 import 'package:instagram/Widgets/LoginSignup/loginSignupBackground.dart';
 import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/loginSignupTextfield.dart';
 import 'package:provider/provider.dart';
-import '../Widgets/LoginSignup/LoginSignupTextfield/signupProfileImage.dart';
+import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/signupProfileImage.dart';
 
 class LoginSignup extends StatelessWidget {
   const LoginSignup({Key? key}) : super(key: key);

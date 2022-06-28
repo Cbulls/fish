@@ -4,7 +4,7 @@ import 'package:instagram/Methods/storageMethod.dart';
 import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:uuid/uuid.dart';
-import '../Models/posts.dart';
+import 'package:instagram/Models/posts.dart';
 
 class HomeData extends ChangeNotifier {
   var homeData = [];
@@ -31,7 +31,6 @@ class HomeData extends ChangeNotifier {
       for (var i = 0; i < 2; i++) {
         print('doc : ${fishResult.docs[i].data()['postId']}');
         homeData.add(fishResult.docs[i].data());
-        //getComments(fishResult.docs[i].data()['postId']);
       }
     } catch (e) {
       print(e);
@@ -41,18 +40,9 @@ class HomeData extends ChangeNotifier {
     notifyListeners();
   }
 
-  // getComments(postId) async {
-  //   try {
-  //     var comments = await firestore.collection('comments').doc(postId).get();
-  //     print('getcomments: ${comments.data()}');
-  //     return comments.data()?.length;
-  //   } catch (e) {
-  //     print(e);
-  //   }
-  //   print('homeData : $homeData');
-  //
-  //   notifyListeners();
-  // }
+  deletePost(String postId) async{
+    await firestore.collection('posts').doc(postId).delete();
+  }
 
   // Upload 페이지에서 사진과 글을 생성할 때 사용됨
   putData(uid, postId, username, likes, image, content, now) {
@@ -71,8 +61,7 @@ class HomeData extends ChangeNotifier {
     notifyListeners();
   }
 
-  uploadPost(description, uid, photo, username) async {
-    print('username : $username');
+  uploadPost(description, uid, photo, username, profilePic) async {
     try {
       String postId = const Uuid().v1();
       String photoUrl = await uploadImageToStorage('posts', photo, true);
@@ -83,10 +72,10 @@ class HomeData extends ChangeNotifier {
         likes: [],
         postId: postId,
         photoUrl: photoUrl,
+        profilePic: profilePic,
         username: username,
       );
       firestore.collection('posts').doc(postId).set(post.toJson());
-      //putData(uid, postId, username, 0, photoUrl, content, DateTime.now());
       getPostData();
     } catch (error) {
       print('upload error: $error');
@@ -95,7 +84,6 @@ class HomeData extends ChangeNotifier {
   }
 
   uploadComment(uid, postId, content, username, photoUrl) async {
-    print('comment username : $username');
     try {
       String commentId = const Uuid().v1();
       await firestore

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/loginSignupTextFormField.dart';
 import 'package:provider/provider.dart';
 import '../../../Methods/loginSignupMethods.dart';
-import './loginSignupTap.dart';
+import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/loginSignupTap.dart';
 
 class LoginSignupTextfield extends StatelessWidget {
   LoginSignupTextfield({Key? key}) : super(key: key);

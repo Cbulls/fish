@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../Methods/profileMethods.dart';
+import 'package:instagram/Methods/profileMethods.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key, this.profileImage, this.user}) : super(key: key);

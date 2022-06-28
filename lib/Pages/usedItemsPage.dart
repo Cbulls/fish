@@ -8,15 +8,8 @@ class UsedItemsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
         crossAxisCount: 2,
-        // Generate 100 widgets that display their index in the List.
         children: List.generate(10, (index) {
-          return UsedItemCard();
-          //   Center(
-          //   child: Text(
-          //     'Item $index',
-          //     style: Theme.of(context).textTheme.headline5,
-          //   ),
-          // );
+          return const UsedItemCard();
         }));
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Methods/pageMethods.dart';
-import 'package:instagram/Widgets/practice.dart';
+import 'package:instagram/Widgets/gridUsedItems.dart';
 import 'package:provider/provider.dart';
-import '../widgets/homeItem.dart';
+import 'package:instagram/widgets/homeItem.dart';
 
 class BodyPage extends StatelessWidget {
   const BodyPage({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class BodyPage extends StatelessWidget {
       controller: context.read<PageData>().pageController,
       children: const [
         HomeItem(),
-        Practice(),
+        GridUsedItems(),
         Center(
           child: Text('3'),
         ),

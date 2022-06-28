@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Methods/profileMethods.dart';
 import 'package:provider/provider.dart';
-import '../../../Constants/loginSignupConstants.dart';
+import 'package:instagram/Constants/loginSignupConstants.dart';
 
 class SignupProfileImage extends StatelessWidget {
   const SignupProfileImage({Key? key}) : super(key: key);

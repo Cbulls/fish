@@ -2,9 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../Methods/loginSignupMethods.dart';
-import './commentInput.dart';
-import 'commentItem.dart';
+import 'package:instagram/Methods/loginSignupMethods.dart';
+import 'package:instagram/Widgets/Comment/commentInput.dart';
+import 'package:instagram/Widgets/Comment/commentItem.dart';
 
 class CommentMain extends StatelessWidget {
   const CommentMain({Key? key, required this.postId}) : super(key: key);
@@ -22,13 +22,13 @@ class CommentMain extends StatelessWidget {
               commentsList(postId),
               snapshot.hasData
                   ? Column(children: [
-                      const Divider(
-                        height: 15.0,
-                        color: Colors.grey,
-                      ),
                       CommentInput(
                         postId: postId,
-                      )
+                      ),
+                const Divider(
+                  height: 15.0,
+                  color: Colors.grey,
+                ),
                     ])
                   : const SizedBox()
             ],
