@@ -26,8 +26,7 @@ void main() async {
     providers: [
       ChangeNotifierProvider<HomeData>(create: (context) => HomeData()),
       ChangeNotifierProvider<ProfileData>(create: (context) => ProfileData()),
-      ChangeNotifierProvider<LoginSignupData>(
-          create: (context) => LoginSignupData()),
+      ChangeNotifierProvider<LoginSignupData>(create: (context) => LoginSignupData()),
       ChangeNotifierProvider<PageData>(create: (context) => PageData())
     ],
     child: MaterialApp(

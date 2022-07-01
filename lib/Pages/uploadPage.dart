@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:instagram/Methods/homeMethods.dart';
 import 'package:instagram/Methods/profileMethods.dart';
-import '../Constants/fishList.dart';
+import 'package:instagram/Constants/fishList.dart';
 
 class Upload extends StatefulWidget {
   const Upload({Key? key}) : super(key: key);
@@ -18,16 +18,6 @@ class _UploadState extends State<Upload> {
   var textController = TextEditingController();
   var now = DateTime.now();
   final authentication = auth.FirebaseAuth.instance;
-  // List freshwaterFishList = [
-  //   '민물고기 아님',
-  //   '가물치',
-  //   '누치',
-  //   '배스',
-  //   '붕어',
-  //   '블루길',
-  //   '잉어',
-  //   '종류 미상'
-  // ];
   String _selectedFish = '민물고기 아님';
 
   void changeSelected(fish) {
@@ -79,10 +69,7 @@ class _UploadState extends State<Upload> {
                 },
                 icon: const Icon(Icons.close)),
             StreamBuilder<auth.User?>(
-                stream: context
-                    .watch<LoginSignupData>()
-                    .authentication
-                    .authStateChanges(),
+                stream: context.watch<LoginSignupData>().authentication.authStateChanges(),
                 builder: (context, snapshot) {
                   final currentUser = context.read<LoginSignupData>().authentication.currentUser!;
                   return IconButton(

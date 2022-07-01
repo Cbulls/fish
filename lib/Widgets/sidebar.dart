@@ -54,27 +54,14 @@ class Sidebar extends StatelessWidget {
           ),
           context.read<LoginSignupData>().userData != null
               ? ListTile(
-                  leading: const Icon(
-                    Icons.logout,
-                    color: Colors.black,
-                  ),
-                  title: const Text('로그아웃',
-                      style: TextStyle(fontSize: 17, color: Colors.black)),
-                  onTap: () {
-                    context.read<LoginSignupData>().signOut();
-                  })
+                  leading: const Icon( Icons.logout, color: Colors.black,),
+                  title: const Text('로그아웃', style: TextStyle(fontSize: 17, color: Colors.black)),
+                  onTap: () {context.read<LoginSignupData>().signOut();})
               : ListTile(
-                  leading: const Icon(
-                    Icons.login,
-                    color: Colors.black,
-                  ),
-                  title: const Text('로그인',
-                      style: TextStyle(fontSize: 17, color: Colors.black)),
+                  leading: const Icon( Icons.login, color: Colors.black, ),
+                  title: const Text('로그인', style: TextStyle(fontSize: 17, color: Colors.black)),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginSignup()));
+                    Navigator.push( context, MaterialPageRoute( builder: (context) => const LoginSignup()));
                   })
         ],
       ),

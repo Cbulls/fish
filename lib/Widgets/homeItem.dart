@@ -62,12 +62,11 @@ class _HomeItemState extends State<HomeItem> {
                           title: GestureDetector(onTap: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        Profile(
-                                          profileImage: snap['photoUrl'],
-                                          user: snap['username'],
-                                        )
+                                MaterialPageRoute( builder: (context) =>
+                                    Profile(
+                                      profileImage: snap['photoUrl'],
+                                      user: snap['username'],
+                                    )
                                 )
                             );
                           },
@@ -133,10 +132,7 @@ class _HomeItemState extends State<HomeItem> {
                                       .collection('comments')
                                       .orderBy('createdAt', descending: false)
                                       .snapshots(),
-                                  builder: (context,
-                                      AsyncSnapshot<
-                                          QuerySnapshot<Map<String, dynamic>>>
-                                      snapshot) {
+                                  builder: (context, AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
                                     return snapshot.hasData
                                         ? Text(
                                       snapshot.data!.docs.length.toString(),

@@ -33,9 +33,8 @@ class HomeData extends ChangeNotifier {
         homeData.add(fishResult.docs[i].data());
       }
     } catch (e) {
-      print(e);
+      print('get post error : $e');
     }
-    print('homeData : $homeData');
 
     notifyListeners();
   }
@@ -115,7 +114,6 @@ class HomeData extends ChangeNotifier {
       for (var i = itemCount; i < itemCount + 1; i++) {
         print('doc : ${fishResult.docs[i].data()['postId']}');
         homeData.add(fishResult.docs[i].data());
-        //getComments(fishResult.docs[i].data()['postId']);
       }
       itemCount = itemCount + 1;
     } catch (e) {
@@ -127,12 +125,12 @@ class HomeData extends ChangeNotifier {
   pressLike(String postId, String uid, likes) async {
     try {
       if (likes.contains(uid)) {
-        // if the likes list contains the user uid, we need to remove it
+        // 만약 좋아요 리스트에 uid가 포함되어 있으면 지운다.
         await firestore.collection('posts').doc(postId).update({
           'likes': FieldValue.arrayRemove([uid])
         });
       } else {
-        // else we need to add uid to the likes array
+        // 없으면 추가한다.
         await firestore.collection('posts').doc(postId).update({
           'likes': FieldValue.arrayUnion([uid])
         });

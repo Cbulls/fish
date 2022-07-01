@@ -8,8 +8,8 @@ final _bottomBarList = [
     icon: Icon(Icons.home),
   ),
   const BottomNavigationBarItem(
-    label: 'Music',
-    icon: Icon(Icons.music_note),
+    label: 'Shop',
+    icon: Icon(Icons.shopping_bag),
   ),
   const BottomNavigationBarItem(
     label: 'Places',

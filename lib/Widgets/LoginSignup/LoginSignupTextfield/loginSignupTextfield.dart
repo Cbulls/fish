@@ -5,7 +5,7 @@ import '../../../Methods/loginSignupMethods.dart';
 import 'package:instagram/Widgets/LoginSignup/LoginSignupTextfield/loginSignupTap.dart';
 
 class LoginSignupTextfield extends StatelessWidget {
-  LoginSignupTextfield({Key? key}) : super(key: key);
+  const LoginSignupTextfield({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,13 +46,13 @@ class LoginSignupTextfield extends StatelessWidget {
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     key:  context.watch<LoginSignupData>().formKey,
                     child: Column(
-                      children: [
+                      children: const <Widget>[
                         LoginSignupTextFormField(valueKeyNumb: 1, textValue: 'username'),
-                        const SizedBox(
+                        SizedBox(
                           height: 8,
                         ),
                         LoginSignupTextFormField(valueKeyNumb: 2, textValue: 'email'),
-                        const SizedBox(
+                        SizedBox(
                           height: 8,
                         ),
                         LoginSignupTextFormField(valueKeyNumb: 3, textValue: 'password')
@@ -65,12 +65,11 @@ class LoginSignupTextfield extends StatelessWidget {
                   margin: const EdgeInsets.only(top: 20),
                   child: Form(
                     autovalidateMode: AutovalidateMode.onUserInteraction,
-                    key:  context.watch<LoginSignupData>().formKey,
-                    //key: formKey,
+                    key: context.watch<LoginSignupData>().formKey,
                     child: Column(
-                      children: [
+                      children: const <Widget> [
                         LoginSignupTextFormField(valueKeyNumb: 4, textValue: 'email'),
-                        const SizedBox(
+                        SizedBox(
                           height: 8.0,
                         ),
                         LoginSignupTextFormField(valueKeyNumb: 5, textValue: 'password')
