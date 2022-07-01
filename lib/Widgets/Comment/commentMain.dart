@@ -16,7 +16,6 @@ class CommentMain extends StatelessWidget {
         stream:
             context.watch<LoginSignupData>().authentication.authStateChanges(),
         builder: (context, snapshot) {
-          print('snapshot : ${snapshot.data}');
           return Column(
             children: [
               commentsList(postId),

@@ -38,6 +38,7 @@ class _CommentInputState extends State<CommentInput> {
                     if (input == null) {
                       return "Please enter comment";
                     }
+                    return null;
                   },
                   controller: _commentController,
                   decoration: const InputDecoration(
@@ -53,28 +54,15 @@ class _CommentInputState extends State<CommentInput> {
               ),
               onTap: () {
                 final isValid = _formKey.currentState!.validate();
+                final read =  context.read<LoginSignupData>();
                 if (isValid) {
                   _formKey.currentState!.save();
-                  print(
-                      'userData : ${context.read<LoginSignupData>().authentication.currentUser?.uid}');
                   context.read<HomeData>().uploadComment(
-                        context
-                            .read<LoginSignupData>()
-                            .authentication
-                            .currentUser
-                            ?.uid,
+                        read.authentication.currentUser?.uid,
                         widget.postId,
                         _commentController.text,
-                        context
-                            .read<LoginSignupData>()
-                            .authentication
-                            .currentUser
-                            ?.displayName,
-                        context
-                            .read<LoginSignupData>()
-                            .authentication
-                            .currentUser
-                            ?.photoURL,
+                        read.authentication.currentUser?.displayName,
+                        read.authentication.currentUser?.photoURL,
                       );
                   setState(() {
                     _commentController.text = "";
