@@ -13,20 +13,20 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/Users/heeyun/StudioProjects/ Instagram 220610/android/app/src/main/AndroidManifest.xml:3:5-66
-15-->/Users/heeyun/StudioProjects/ Instagram 220610/android/app/src/main/AndroidManifest.xml:3:22-64
+15-->/Users/heeyun/StudioProjects/fish/android/app/src/main/AndroidManifest.xml:3:5-66
+15-->/Users/heeyun/StudioProjects/fish/android/app/src/main/AndroidManifest.xml:3:22-64
 16    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-16-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
-16-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
+16-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+16-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
 17    <uses-permission android:name="android.permission.VIBRATE" />
-17-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-66
-17-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-63
+17-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-66
+17-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-63
 18    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
-18-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
-18-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
+18-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
+18-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
 19    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-19-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-79
-19-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-76
+19-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-79
+19-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-76
 20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 20-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:24:5-79
 20-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:24:22-76
@@ -72,37 +72,37 @@
 59            android:value="2" />
 60
 61        <service
-61-->[:firebase_auth] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+61-->[:firebase_auth] /Users/heeyun/StudioProjects/fish/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 62            android:name="com.google.firebase.components.ComponentDiscoveryService"
-62-->[:firebase_auth] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+62-->[:firebase_auth] /Users/heeyun/StudioProjects/fish/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
 63            android:directBootAware="true"
 63-->[com.google.firebase:firebase-common:20.1.1] /Users/heeyun/.gradle/caches/transforms-3/04b7acc8de0f520e3af6f4f973f3c7ee/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
 64            android:exported="false" >
 64-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:66:13-37
 65            <meta-data
-65-->[:firebase_auth] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+65-->[:firebase_auth] /Users/heeyun/StudioProjects/fish/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 66                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-66-->[:firebase_auth] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+66-->[:firebase_auth] /Users/heeyun/StudioProjects/fish/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 67                android:value="com.google.firebase.components.ComponentRegistrar" />
-67-->[:firebase_auth] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+67-->[:firebase_auth] /Users/heeyun/StudioProjects/fish/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 68            <meta-data
-68-->[:firebase_storage] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+68-->[:firebase_storage] /Users/heeyun/StudioProjects/fish/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 69                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
-69-->[:firebase_storage] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-126
+69-->[:firebase_storage] /Users/heeyun/StudioProjects/fish/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-126
 70                android:value="com.google.firebase.components.ComponentRegistrar" />
-70-->[:firebase_storage] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+70-->[:firebase_storage] /Users/heeyun/StudioProjects/fish/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 71            <meta-data
-71-->[:cloud_firestore] /Users/heeyun/StudioProjects/ Instagram 220610/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+71-->[:cloud_firestore] /Users/heeyun/StudioProjects/fish/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 72                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-72-->[:cloud_firestore] /Users/heeyun/StudioProjects/ Instagram 220610/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
+72-->[:cloud_firestore] /Users/heeyun/StudioProjects/fish/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
 73                android:value="com.google.firebase.components.ComponentRegistrar" />
-73-->[:cloud_firestore] /Users/heeyun/StudioProjects/ Instagram 220610/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+73-->[:cloud_firestore] /Users/heeyun/StudioProjects/fish/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 74            <meta-data
-74-->[:firebase_core] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+74-->[:firebase_core] /Users/heeyun/StudioProjects/fish/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 75                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-75-->[:firebase_core] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+75-->[:firebase_core] /Users/heeyun/StudioProjects/fish/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 76                android:value="com.google.firebase.components.ComponentRegistrar" />
-76-->[:firebase_core] /Users/heeyun/StudioProjects/ Instagram 220610/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+76-->[:firebase_core] /Users/heeyun/StudioProjects/fish/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 77            <meta-data
 77-->[com.google.firebase:firebase-auth:21.0.3] /Users/heeyun/.gradle/caches/transforms-3/9b471ff566c2030212a0b82a58b1420b/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:67:13-69:85
 78                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
@@ -124,49 +124,49 @@
 86        </service>
 87
 88        <provider
-88-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+88-->[:image_picker_android] /Users/heeyun/StudioProjects/fish/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 89            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-89-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+89-->[:image_picker_android] /Users/heeyun/StudioProjects/fish/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
 90            android:authorities="com.HYcompany.fishgram.flutter.image_provider"
-90-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+90-->[:image_picker_android] /Users/heeyun/StudioProjects/fish/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
 91            android:exported="false"
-91-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+91-->[:image_picker_android] /Users/heeyun/StudioProjects/fish/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 92            android:grantUriPermissions="true" >
-92-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+92-->[:image_picker_android] /Users/heeyun/StudioProjects/fish/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
 93            <meta-data
-93-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
+93-->[:image_picker_android] /Users/heeyun/StudioProjects/fish/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
 94                android:name="android.support.FILE_PROVIDER_PATHS"
-94-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+94-->[:image_picker_android] /Users/heeyun/StudioProjects/fish/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 95                android:resource="@xml/flutter_image_picker_file_paths" />
-95-->[:image_picker_android] /Users/heeyun/StudioProjects/ Instagram 220610/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
+95-->[:image_picker_android] /Users/heeyun/StudioProjects/fish/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
 96        </provider>
 97
 98        <receiver
-98-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-17:40
+98-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-17:40
 99            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
-99-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-97
+99-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-97
 100            android:exported="false" />
-100-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
+100-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
 101        <receiver
-101-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-27:20
+101-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-27:20
 102            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
-102-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-101
+102-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-101
 103            android:exported="false" >
-103-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-37
+103-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-37
 104            <intent-filter>
-104-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-26:29
+104-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-26:29
 105                <action android:name="android.intent.action.BOOT_COMPLETED" />
-105-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-79
-105-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-76
+105-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-79
+105-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-76
 106                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-106-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:17-84
-106-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:25-81
+106-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:17-84
+106-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:25-81
 107                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-107-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-82
-107-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-79
+107-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-82
+107-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-79
 108                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-108-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-82
-108-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/ Instagram 220610/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:25-79
+108-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-82
+108-->[:flutter_local_notifications] /Users/heeyun/StudioProjects/fish/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:25-79
 109            </intent-filter>
 110        </receiver>
 111

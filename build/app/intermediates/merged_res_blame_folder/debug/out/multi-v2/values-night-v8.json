@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/heeyun/StudioProjects/ Instagram 220610/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/heeyun/StudioProjects/fish/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/heeyun/StudioProjects/ Instagram 220610/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/heeyun/StudioProjects/fish/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
