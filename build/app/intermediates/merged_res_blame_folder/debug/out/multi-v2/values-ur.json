@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/heeyun/StudioProjects/ Instagram 220610/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml",
+            "outputFile": "/Users/heeyun/StudioProjects/fish/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml",
             "map": [
                 {
                     "source": "/Users/heeyun/.gradle/caches/transforms-3/de037800295f039b33eec1c58cd9f22f/transformed/jetified-play-services-base-18.0.1/res/values-ur/values.xml",

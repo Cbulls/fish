@@ -57,14 +57,14 @@ class _HomeItemState extends State<HomeItem> {
                         child: ListTile(
                           leading: CircleAvatar(
                             radius: 40,
-                            foregroundImage: NetworkImage(snap['photoUrl']),
+                            foregroundImage: NetworkImage(snap['profilePic']),
                           ),
                           title: GestureDetector(onTap: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute( builder: (context) =>
                                     Profile(
-                                      profileImage: snap['photoUrl'],
+                                      profileImage: snap['profilePic'],
                                       user: snap['username'],
                                     )
                                 )
